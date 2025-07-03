@@ -17,3 +17,10 @@
                   Understanding the fundamentals of data retrieval and filtering,
                   
 ------------------------------------------------------------------------------------------------------------
+  Session 2: 
+  
+      Intermediate Query Writing and Data Manipulation                                                Done
+
+      Exploring SQL Server data types and their usage                                                 Done 
+
+      Writing Data Manipulation Language (DML) statements for inserting, updating, and deleting data  Done
