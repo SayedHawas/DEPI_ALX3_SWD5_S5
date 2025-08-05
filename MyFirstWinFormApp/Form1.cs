@@ -20,5 +20,10 @@ namespace MyFirstWinFormApp
                 MessageBox.Show("Username Or Password Invalid ...", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
