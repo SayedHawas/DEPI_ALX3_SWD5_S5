@@ -242,34 +242,34 @@ namespace Day6Lab
             }
         }
     }
-    public class TestObject
-    {
+    //public class TestObject
+    //{
 
-        public TestObject()
-        {
-            NormalClass NC = new NormalClass();
-            NC.Id = 1;
-            NC.TestInherit = 10;
+    //    public TestObject()
+    //    {
+    //        NormalClass NC = new NormalClass();
+    //        NC.Id = 1;
+    //        NC.TestInherit = 10;
 
-            SealedClass Sc = new SealedClass();
-            Sc.Id = 2;
+    //        SealedClass Sc = new SealedClass();
+    //        Sc.Id = 2;
 
-            //StaticClass sc2 = new StaticClass();
+    //        //StaticClass sc2 = new StaticClass();
 
-            StaticClass.Sayhello();
+    //        StaticClass.Sayhello();
 
-            PartialClass Pc = new PartialClass();
-            Pc.Save();
-            Pc.Edit();
+    //        PartialClass Pc = new PartialClass();
+    //        Pc.Save();
+    //        Pc.Edit();
 
-            //AbstractClass Ac = new AbstractClass();
+    //        //AbstractClass Ac = new AbstractClass();
 
-            OuterClass Oc = new OuterClass();
-            OuterClass.InnerClass IC = new OuterClass.InnerClass();
+    //        OuterClass Oc = new OuterClass();
+    //        OuterClass.InnerClass IC = new OuterClass.InnerClass();
 
-        }
+    //    }
 
-    }
+    //}
     public class TestInheritanceTo
     {
         public int TestInherit { get; set; }
