@@ -31,6 +31,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day10Lab", "Day10Lab\Day10L
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day10CodeFirstLab", "Day10CodeFirstLab\Day10CodeFirstLab.csproj", "{18A1F4CF-D001-40B1-A884-D8A693E7A202}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day11Day1CssDatabaseFirstLab", "Day11Day1CssDatabaseFirstLab\Day11Day1CssDatabaseFirstLab.csproj", "{EA60167B-58C0-4456-AB23-24DA1810F58E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day11HTMLCssLab", "Day11HTMLCssLab\Day11HTMLCssLab.csproj", "{BC44A31E-CC98-47E6-A21A-7AFED0C26365}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +97,14 @@ Global
 		{18A1F4CF-D001-40B1-A884-D8A693E7A202}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18A1F4CF-D001-40B1-A884-D8A693E7A202}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18A1F4CF-D001-40B1-A884-D8A693E7A202}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA60167B-58C0-4456-AB23-24DA1810F58E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA60167B-58C0-4456-AB23-24DA1810F58E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA60167B-58C0-4456-AB23-24DA1810F58E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA60167B-58C0-4456-AB23-24DA1810F58E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC44A31E-CC98-47E6-A21A-7AFED0C26365}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC44A31E-CC98-47E6-A21A-7AFED0C26365}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC44A31E-CC98-47E6-A21A-7AFED0C26365}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC44A31E-CC98-47E6-A21A-7AFED0C26365}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
