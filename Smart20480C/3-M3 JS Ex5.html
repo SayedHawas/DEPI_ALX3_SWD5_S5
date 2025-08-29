@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+
+    <style>
+        th {
+            border: 2px solid black;
+            background-color: #4800ff;
+            color: #fff;
+            padding: 8px;
+        }
+        
+        #Products {
+            border: 2px solid black;
+            margin-left: auto;
+            margin-right: auto;
+            border-collapse: collapse;
+        }
+        
+        #Products td {
+            border: 2px solid black;
+        }
+    </style>
+    <script>
+        function AddProduct() {
+
+            var productName = document.getElementById("txtproduct").value;
+            var price = document.getElementById("txtPrice").value;
+
+            // to create new Row 
+            var NewRow = document.createElement('tr'); //<tr>  </tr>
+            //to add Row in Table Products
+            document.getElementById("Products").appendChild(NewRow);
+
+            //to create cell for Product name 
+            var tdProduct = document.createElement('td');
+            // to send the text from productname variable
+            tdProduct.textContent = productName;
+            // to add the element to table 
+            document.getElementById("Products").appendChild(tdProduct);
+
+            //same code With Price 
+            var tdPrice = document.createElement('td');
+            tdPrice.textContent = price;
+            document.getElementById("Products").appendChild(tdPrice);
+
+
+            // to clear the textbox 
+            document.getElementById("txtproduct").value = "";
+            document.getElementById("txtPrice").value = "";
+
+            window.alert("Add New product");
+        }
+    </script>
+</head>
+
+<body>
+    <hr>
+    <a href="3-M3 Introduction to JavaScript.html">Back</a>
+    <hr>
+    <table>
+        <tr>
+            <td>ProductName: </td>
+            <td><input type="text" id="txtproduct" placeholder="Enter the Product Name " required="required" title=" Plz Enter the product name !" /></td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td><input type="text" id="txtPrice" placeholder="Enter the price " /> </td>
+
+        </tr>
+        <tr>
+            <td><label id="labMessage"></label></td>
+            <td><input type="button" value="Add" id="btnAdd" onclick="AddProduct()" /></td>
+        </tr>
+    </table>
+
+    <br />
+    <hr style="width :50%" />
+    <table id="Products">
+        <tr>
+            <th>Product Name </th>
+            <th> Price </th>
+        </tr>
+    </table>
+</body>
+
+</html>

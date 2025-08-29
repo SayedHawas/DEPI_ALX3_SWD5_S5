@@ -1,0 +1,789 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .Code {
+            background-color: rgba(128, 128, 128, 0.77);
+            border-radius: 10px;
+            padding-right: 10px;
+            display: inline-block;
+        }
+        @font-face {
+            font-family: 'HenryMorganHand';
+            src: url('Fonts/HenryMorganHand.woff') format('woff');
+           
+        }
+
+        #paraph::first-letter {
+            color: #ff0000;
+            font-size: xx-large;
+        }
+
+        #divdemo {
+            background-image: url('images/ico19.gif'), url('images/ico30.gif');
+            background-repeat: repeat;
+             width: 600px;
+            height: 600px;
+        }
+
+        #divdemo2 {
+            background-image: url('images/ico19.gif'), url('images/ico30.gif');
+            background-repeat: repeat-x , repeat-y;
+            width: 600px;
+            height: 600px;
+        }
+
+        #borderimg1 {
+            border: 10px solid transparent;
+            padding: 15px;
+            -webkit-border-image: url(images/border.png) 30 round; /* Safari 3.1-5 */
+            -o-border-image: url(images/border.png) 30 round; /* Opera 11-12.1 */
+            border-image: url(images/border.png) 30 round;
+        }
+
+        #borderimg2 {
+            border: 10px solid transparent;
+            padding: 15px;
+            -webkit-border-image: url(images/border.png) 30 stretch; /* Safari 3.1-5 */
+            -o-border-image: url(images/border.png) 30 stretch; /* Opera 11-12.1 */
+            border-image: url(images/border.png) 30 stretch;
+        }
+
+        #divGradients {
+            background: linear-gradient(to right, black 0%, white 100%);
+            width:400px;height:200px;
+            border:3px solid red;
+        }
+        #divGradients2 {
+            background: linear-gradient(to left, black 0%, white 100%);
+            width: 400px;
+            height: 200px;
+            border: 3px solid red;
+        }
+
+        #divGradients3 {
+            background: linear-gradient(to top, black 0%, white 100%);
+            width: 400px;
+            height: 200px;
+            border: 3px solid red;
+        }
+
+        #divtransform {
+            margin:20px;
+            padding:20px;
+            width: 200px;
+            height: 200px;
+            transform: rotate(30deg);
+        }
+        #div1{
+            width: 300px;
+            height: 100px;
+            background-color: yellow;
+            border: 1px solid black;
+            -ms-transform: translate(50px,100px); /* IE 9 */
+            -webkit-transform: translate(50px,100px); /* Safari */
+            transform: translate(50px,100px); /* Standard syntax */
+        }
+        #div2 {
+            width: 300px;
+            height: 100px;
+            background-color: yellow;
+            border: 1px solid black;
+            -moz-transform: rotate(20deg);
+            -ms-transform: rotate(20deg);
+            -o-transform: rotate(20deg);
+            -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+        }
+
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center">Module 6 Styling HTML5 by Using CSS3 </h1>
+    <hr width=50%>
+    <ol>
+        <li>
+            <h4 style="color:blue;">Styling Text by Using CSS3</h4>
+        </li>
+        <li>
+            <h4 style="color:blue;">Styling Block Elements </h4>
+        </li>
+        <li>
+            <h4 style="color:blue;"> Pseudo-Classes and Pseudo-Elements</h4>
+        </li>
+        <li>
+            <h4 style="color:blue;">Enhancing Graphical Effects by Using CSS3 </h4>
+        </li>
+    </ol>
+    <hr>
+    <h2><span style="color:red;">Lesson 1</span> Styling Text by Using CSS3</h2>
+    <ul>
+        <li> Fonts and Measurements </li>
+        <li> Implementing Text Effects</li>
+    </ul>
+
+
+    <hr />
+    <h1>Fonts and Measurements</h1>
+    <h3>CSS3 font and text properties support:</h3>
+
+    <h2>External fonts</h2>
+    <div class="Code">
+        <code>
+            <pre>
+     @font-face{
+        font-family: newGroovyFont;
+        src: url(‘CandaraPlus.ttf')
+     }
+    </pre>
+        </code>
+    </div>
+    <p style="font-family:HenryMorganHand; font-size:60px;"> Welcome in Css3 Retaj &amp; Mariam </p>
+
+    <hr />
+    <h2>
+        Absolute text sizes
+    </h2>
+    <div class="Code">
+        <code>
+            <pre>
+font-size : 16pt;
+line-height : 0.5in;
+letter-spacing : 12mm;
+    </pre>
+        </code>
+    </div>
+    <p style="font-size:16pt;"> Welcome in Style With  CSS3  </p>
+    <p style="font-size:.5in;"> Welcome in Style With  CSS3  </p>
+    <p style="font-size:12mm;"> Welcome in Style With  CSS3  </p>
+    <table border="1" style="border-collapse:collapse">
+        <tr>
+            <th style="width:12%">Unit</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>cm</td>
+            <td>
+                centimeters
+
+            </td>
+        </tr>
+        <tr>
+            <td>mm</td>
+            <td>
+                millimeters
+
+            </td>
+        </tr>
+        <tr>
+            <td>in</td>
+            <td>
+                inches (1in = 96px = 2.54cm)
+
+            </td>
+        </tr>
+        <tr>
+            <td>px *</td>
+            <td>
+                pixels (1px = 1/96th of 1in)
+
+            </td>
+        </tr>
+        <tr>
+            <td>pt</td>
+            <td>
+                points (1pt = 1/72 of 1in)
+
+            </td>
+        </tr>
+        <tr>
+            <td>pc</td>
+            <td>
+                picas (1pc = 12 pt)
+
+            </td>
+        </tr>
+    </table>
+    <hr />
+    <h2>
+        Relative text sizes
+    </h2>
+    <div class="Code">
+        <code>
+            <pre>
+font-size : 1em;
+border-width : 300px;
+padding : 16rem;
+    </pre>
+        </code>
+    </div>
+    <p style="font-size:1em;"> Welcome in Style With  CSS3  </p>
+    <p style="font-size:30px;"> Welcome in Style With  CSS3  </p>
+    <p style="font-size:2rem;"> Welcome in Style With  CSS3  </p>
+
+    <table border="1" style="border-collapse:collapse">
+        <tr>
+            <th style="width:12%">Unit</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>em</td>
+            <td>
+                Relative to the font-size of the element (2em means 2 times the size of the current font)
+
+            </td>
+        </tr>
+        <tr>
+            <td>ex</td>
+            <td>
+                Relative to the x-height of the current font (rarely used)
+
+            </td>
+        </tr>
+        <tr>
+            <td>ch</td>
+            <td>Relative to width of the &quot;0&quot; (zero)</td>
+        </tr>
+        <tr>
+            <td>rem</td>
+            <td>Relative to font-size of the root element</td>
+        </tr>
+        <tr>
+            <td>vw</td>
+            <td>
+                Relative to 1% of the width of the viewport*
+
+            </td>
+        </tr>
+        <tr>
+            <td>vh</td>
+            <td>
+                Relative to 1% of the height of the viewport*
+
+            </td>
+        </tr>
+        <tr>
+            <td>vmin</td>
+            <td>
+                Relative to 1% of viewport's* smaller dimension
+
+            </td>
+        </tr>
+        <tr>
+            <td>vmax</td>
+            <td>
+                Relative to 1% of viewport's* larger dimension
+
+        </tr>
+        <tr>
+            <td>%</td>
+            <td>&nbsp;</td>
+        </tr>
+    </table>
+
+    <hr />
+    <h1>Implementing Text Effects</h1>
+    <h3>CSS3 includes further text styling support for:</h3>
+
+    <h5>Paragraph indentation</h5>
+    <p>text-indent: 3rem;</p>
+    <p style="text-indent:40px;">
+        Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document.
+    </p>
+
+    <h5>Line wrapping</h5>
+    <p>
+        hyphens: manual; <br />
+        word-wrap: break-word;
+    </p>
+
+    <p style="width: 200px;
+        border: 1px solid #000;
+        word-wrap:normal;">
+        Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed codeingtheCode for the video you want to add. You can also type a keyword to search online for the video that best fits your document.
+    </p>
+    <h5>
+        Text spacing
+    </h5>
+    <p>word-spacing: 2rem;</p>
+    <p style="word-spacing:10px;">
+        Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed codeingtheCode for the video you want to add. You can also type a keyword to search online for the video that best fits your document.
+    </p>
+
+    <h5>
+        Shadow effects
+    </h5>
+
+    <h2 style="text-shadow:10px 10px 2px red"> Welcome in Shadow Effects</h2>
+
+    <hr />
+    <h1>Lesson 2: Styling Block Elements</h1>
+    <ul>
+        <li> New Block Properties in CSS3</li>
+        <li> Block Layout Models</li>
+    </ul>
+
+    <h4>New Block Properties in CSS3</h4>
+    <p>
+        CSS3 adds new box-level support for:
+    </p>
+    <h2>Outlines</h2>
+    <p>
+        outline: 2px solid green;
+        outline-offset: 5rem;
+    </p>
+
+    <div style="width:300px ; background-color:rgba(128, 128, 128, 0.77) ;padding:10px; outline:3px solid red;">
+        Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed codeingtheCode for the video you want to add. You can also type a keyword to search online for the video that best fits your document.
+    </div>
+
+
+    <h2>Presentation</h2>
+    <p>
+        border-radius: 50% / 30%;<br />
+        overflow: hidden;<br />
+        resize: horizontal;<br />
+    </p>
+    <div style="width:300px ; background-color:rgba(128, 128, 128, 0.77) ;border-radius: 50% / 30%;
+overflow: hidden;
+resize: horizontal;">
+        Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed codeingtheCode for the video you want to add. You can also type a keyword to search online for the video that best fits your document.
+    </div>
+    <h2>
+        Multiple columnlayouts
+    </h2>
+    <p>
+        column-count: 3;<br />
+        column-gap: 5rem;<br />
+        column-rule: 1px solid black;<br />
+    </p>
+
+    <div style="width:300px  ;column-count: 3;column-gap: 5rem;column-rule: 1px solid black;">
+        Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed codeingtheCode for the video you want to add. You can also type a keyword to search online for the video that best fits your document.
+    </div>
+    <hr />
+    <h1>Block Layout Models</h1>
+    <h4>
+        CSS3 supports several block layout methods:
+    </h4>
+    <h2>Block</h2>
+    <p>
+        display: block;
+    </p>
+
+    <h2>Inline</h2>
+    <p>
+        display: inline;<br />
+        display: inline-block;
+    </p>
+
+    <h2>Table</h2>
+    <p>
+        display: table;
+    </p>
+
+    <h2>Positioned</h2>
+    <p>
+        position: relative;<br />
+        position: absolute;<br />
+        position: fixed;<br />
+    </p>
+
+    <h2>Flexbox</h2>
+    <p>
+        display: flexbox;
+    </p>
+
+    <hr />
+    <h1>Lesson 3: Pseudo-Classes and Pseudo-Elements</h1>
+    <ul>
+        <li>Text Pseudo-Elements</li>
+        <li>Link and Form Pseudo-Classes</li>
+        <li>DOM-Related Pseudo-Classes</li>
+    </ul>
+
+    <hr />
+    <h1>Text Pseudo-Elements</h1>
+    <h3>
+        CSS pseudo-elements enable you to select:
+    </h3>
+    <p>
+        The first letter of a text element    p::first-letter <br />
+        The first line of a text element      p::first-line <br />
+        The space before or after a text element  p::before  &nbsp; &nbsp;  p::after <br />
+        Text selected by the user  ::selection
+    </p>
+
+
+    <p id="paraph">You can use the ::first-letter pseudo-element to add a special effect to the first character of a text!</p>
+
+    <table border="1" style="border-collapse:collapse">
+        <tbody>
+            <tr>
+                <th style="width:20%">Selector</th>
+                <th style="width:20%">Example</th>
+                <th>Example description</th>
+            </tr>
+            <tr>
+                <td>::afte</td>
+                <td>p::after</td>
+                <td>Insert something after the content of each &lt;p&gt; element</td>
+            </tr>
+            <tr>
+                <td>::before</td>
+                <td>p::before</td>
+                <td>Insert something before the content of each &lt;p&gt; element</td>
+            </tr>
+            <tr>
+                <td>::first-letter</td>
+                <td>p::first-letter</td>
+                <td>Selects the first letter of each &lt;p&gt; element</td>
+            </tr>
+            <tr>
+                <td>::first-line</td>
+                <td>p::first-line</td>
+                <td>Selects the first line of each &lt;p&gt; element</td>
+            </tr>
+            <tr>
+                <td>::selection</td>
+                <td>p::selection</td>
+                <td>Selects the portion of an element that is selected by a user</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr />
+    <h1>Link and Form Pseudo-Classes</h1>
+    <h3>CSS defines two sets of contextual pseudo-classes:</h3>
+    <h4>Link classes</h4>
+    <p>
+        a:link<br />
+        a:visited<br />
+        a:focus<br />
+        a:hover<br />
+        a:active<br />
+    </p>
+
+    <h4>
+        Form classes
+    </h4>
+    <p>
+        input:enabled <br />
+        input:disabled<br />
+        input:checked <br />
+    </p>
+    <table border="1" style="border-collapse:collapse;">
+        <tbody>
+            <tr>
+                <th style="width:20%">Selector</th>
+                <th style="width:20%">Example</th>
+                <th>Example description</th>
+            </tr>
+            <tr>
+                <td>:active</td>
+                <td>a:active</td>
+                <td>Selects the active link</td>
+            </tr>
+            <tr>
+                <td>:checked</td>
+                <td>input:checked</td>
+                <td>Selects every checked &lt;input&gt; element</td>
+            </tr>
+            <tr>
+                <td>:disabled</td>
+                <td>input:disabled</td>
+                <td>Selects every disabled &lt;input&gt; element</td>
+            </tr>
+            <tr>
+                <td>:empty</td>
+                <td>p:empty</td>
+                <td>Selects every &lt;p&gt; element that has no children</td>
+            </tr>
+            <tr>
+                <td>:enabled</td>
+                <td>input:enabled</td>
+                <td>Selects every enabled &lt;input&gt; element</td>
+            </tr>
+            <tr>
+                <td>:first-child</td>
+                <td>p:first-child</td>
+                <td>Selects every &lt;p&gt; elements that is the first child of its parent</td>
+            </tr>
+            <tr>
+                <td>:first-of-type</td>
+                <td>p:first-of-type</td>
+                <td>Selects every &lt;p&gt; element that is the first &lt;p&gt; element of its parent</td>
+            </tr>
+            <tr>
+                <td>:focus</td>
+                <td>input:focus</td>
+                <td>Selects the &lt;input&gt; element that has focus</td>
+            </tr>
+            <tr>
+                <td>:hover</td>
+                <td>a:hover</td>
+                <td>Selects links on mouse over</td>
+            </tr>
+            <tr>
+                <td>:in-range</td>
+                <td>input:in-range</td>
+                <td>Selects &lt;input&gt; elements with a value within a specified range</td>
+            </tr>
+            <tr>
+                <td>:invalid</td>
+                <td>input:invalid</td>
+                <td>Selects all &lt;input&gt; elements with an invalid value</td>
+            </tr>
+            <tr>
+                <td>:lang(<i>language</i>)</td>
+                <td>p:lang(it)</td>
+                <td>Selects every &lt;p&gt; element with a lang attribute value starting with "it"</td>
+            </tr>
+            <tr>
+                <td>:last-child</td>
+                <td>p:last-child</td>
+                <td>Selects every &lt;p&gt; elements that is the last child of its parent</td>
+            </tr>
+            <tr>
+                <td>:last-of-type</td>
+                <td>p:last-of-type</td>
+                <td>Selects every &lt;p&gt; element that is the last &lt;p&gt; element of its parent</td>
+            </tr>
+            <tr>
+                <td>:link</td>
+                <td>a:link</td>
+                <td>Selects all unvisited links</td>
+            </tr>
+            <tr>
+                <td>:not(selector)</td>
+                <td>:not(p)</td>
+                <td>Selects every element that is not a &lt;p&gt; element</td>
+            </tr>
+            <tr>
+                <td>:nth-child(n)</td>
+                <td>p:nth-child(2)</td>
+                <td>Selects every &lt;p&gt; element that is the second child of its parent</td>
+            </tr>
+            <tr>
+                <td>:nth-last-child(n)</td>
+                <td>p:nth-last-child(2)</td>
+                <td>Selects every &lt;p&gt; element that is the second child of its parent, counting from the last child</td>
+            </tr>
+            <tr>
+                <td>:nth-last-of-type(n)</td>
+                <td>p:nth-last-of-type(2)</td>
+                <td>Selects every &lt;p&gt; element that is the second &lt;p&gt; element of its parent, counting from the last child</td>
+            </tr>
+            <tr>
+                <td>:nth-of-type(n)</td>
+                <td>p:nth-of-type(2)</td>
+                <td>Selects every &lt;p&gt; element that is the second &lt;p&gt; element of its parent</td>
+            </tr>
+            <tr>
+                <td>:only-of-type</td>
+                <td>p:only-of-type</td>
+                <td>Selects every &lt;p&gt; element that is the only &lt;p&gt; element of its parent</td>
+            </tr>
+            <tr>
+                <td>:only-child</td>
+                <td>p:only-child</td>
+                <td>Selects every &lt;p&gt; element that is the only child of its parent</td>
+            </tr>
+            <tr>
+                <td>:optional</td>
+                <td>input:optional</td>
+                <td>Selects &lt;input&gt; elements with no "required" attribute</td>
+            </tr>
+            <tr>
+                <td>:out-of-range</td>
+                <td>input:out-of-range</td>
+                <td>Selects &lt;input&gt; elements with a value outside a specified range</td>
+            </tr>
+            <tr>
+                <td>:read-only</td>
+                <td>input:read-only</td>
+                <td>Selects &lt;input&gt; elements with a "readonly" attribute specified</td>
+            </tr>
+            <tr>
+                <td>:read-write</td>
+                <td>input:read-write</td>
+                <td>Selects &lt;input&gt; elements with no "readonly" attribute</td>
+            </tr>
+            <tr>
+                <td>:required</td>
+                <td>input:required</td>
+                <td>Selects &lt;input&gt; elements with a "required" attribute specified</td>
+            </tr>
+            <tr>
+                <td>:root</td>
+                <td>root</td>
+                <td>Selects the document's root element</td>
+            </tr>
+            <tr>
+                <td>:target</td>
+                <td>:target</td>
+                <td>Selects the current active #news element (clicked on a URL containing that anchor name)</td>
+            </tr>
+            <tr>
+                <td>:valid</td>
+                <td>input:valid</td>
+                <td>Selects all &lt;input&gt; elements with a valid value</td>
+            </tr>
+            <tr>
+                <td>:visited</td>
+                <td>a:visited</td>
+                <td>Selects all visited links</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr />
+    <h1>DOM-Related Pseudo-Classes</h1>
+    <h3>
+        Use positional pseudo-classes to select a single element from a set based on:
+    </h3>
+
+    <h4>Position</h4>
+    <p>
+        p:first-child<br />
+        p:nth-child(2)
+    </p>
+    <h4>Position and type</h4>
+    <p>
+        p:last-of-type<br />
+        p:nth-last-of-type(4)
+    </p>
+    <h4>Document structure</h4>
+    <p>
+        :empty<br />
+        :root<br />
+        :not(p, h1)<br />
+        :target<br />
+    </p>
+    <hr />
+    <h1 style="color:red;">Lesson 4: Enhancing Graphical Effects by Using CSS3</h1>
+    <ul>
+        <li>Specifying Color Values</li>
+        <li>Defining Backgrounds and Effects</li>
+        <li> Implementing Transformations and Graphics</li>
+    </ul>
+
+    <h1>Specifying Color Values</h1>
+    <h3>
+        CSS3 defines several different sets of color values:
+    </h3>
+
+    <h2>Keywords</h2>
+    <p>
+        color:  red; <br />
+        color: transparent; <br />
+        color: currentColor; <br />
+    </p>
+
+    <h2>
+        RGB \ RGBAmodel values
+    </h2>
+    <p>red, green, and blue</p>
+    <p>
+        color: #ff0000;<br />
+        color: rgb(255,0,0);<br />
+        color: rgba(100%,0,0,0.5);<br />
+    </p>
+
+    <h2>HSL \ HSLA model values</h2>
+    <p>hsl(hue, saturation, lightness)</p>
+    <p>
+        color: hsl(240, 100%, 50%);<br />
+        color: hsl(120, 100%, 50%, 0.5);
+    </p>
+
+    <hr />
+    <h1>Defining Backgrounds and Effects</h1>
+
+    <p>
+        CSS3 supports:
+        Multi-image backgrounds
+    </p>
+
+
+    <div id="divdemo">
+        welcome in CSS 3
+    </div>
+    <br /><br />
+    <div id="divdemo2">
+        welcome in CSS 3
+    </div>
+
+    <br />
+    <br />
+    <p id="borderimg1">Here, the middle sections of the image are repeated to create the border.</p>
+    <br />
+    <p id="borderimg2">Here, the middle sections of the image are repeated to create the border.</p>
+    <hr />
+    <h1>
+        Gradients
+    </h1>
+    <code>
+        <pre>
+         background: linear-gradient(direction, start-color, [mid-color-list,] end-color);
+        </pre>
+    </code>
+
+    <div id="divGradients">
+        Welcome in Css3 Gradients
+    </div>
+    <br />
+    <div id="divGradients2">
+        Welcome in Css3 Gradients
+    </div>
+    <br />
+    <div id="divGradients3">
+        Welcome in Css3 Gradients
+    </div>
+    <hr />
+    <h1>Implementing Transformations and Graphics</h1>
+    <p>Using CSS3, you can:</p>
+    <h2>
+        Transform, rotate, and skew elements
+    </h2>
+
+    <h1>Transform</h1>
+    <div id="divtransform">
+        Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed codeingtheCode for the video you want to add. You can also type a keyword to search online for the video that best fits your document.
+    </div>
+
+    <h1>CSS3 2D Transforms</h1>
+    <ul>
+        <li>translate()</li>
+        <li>rotate()</li>
+        <li>scale()</li>
+        <li>skewX()</li>
+        <li>skewY()</li>
+        <li> matrix()</li>
+    </ul>
+
+    <div id="div1">
+        The translate() method moves an element from its current position. This div element is moved 50 pixels to the right, and 100 pixels down from its current position.
+    </div>
+    <br />
+    <br />
+    <br />
+    <div id="div2">
+        The rotate() method rotates an element clockwise or counter-clockwise. This div element is rotated clockwise 20 degrees.
+    </div>
+    <hr />
+    <h1>
+        Generate shapes
+    </h1>
+
+    <div style="
+	width: 200px;
+	height: 200px;
+	background: blue;
+	border-radius: 50%;">
+    </div>
+    <br />
+
+</body>
+</html>

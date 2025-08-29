@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #MainHeader{
+        background-color: rgb(2, 130, 130);
+        border: 2px solid black;
+        text-align: center ;
+        border-radius: 5px;
+        padding:2px ;
+        margin: 0;
+        color: white;
+       }
+        #MainNav{
+        background-color: rgb(14, 2, 66);
+        border: 2px solid black;
+        border-radius: 3px;
+        padding:2px ;
+       }
+       #MainNav ul{
+          list-style: none;
+       }
+        #MainNav ul li{
+          display: inline-block;
+          padding: 0 3px;
+       }
+        #MainNav ul li a{
+          text-decoration: none;
+          color:white;
+       }
+       #MainNav ul li a:hover{
+          color:rgb(230, 226, 7);
+       }
+        #MainFooter{
+        background-color: rgb(72, 85, 85);
+        border: 2px solid black;
+        text-align: center ;
+        border-radius: 5px;
+        padding:2px ;
+        margin: 0;
+        color: white;
+        min-height: 50px;
+        align-items: center;   
+        }
+        article div{
+            min-height: 250px;
+        }
+        #articleSql{
+        background-color: rgb(195, 240, 240);
+        border: 2px solid black;
+        padding:2px ;
+        margin: 2px;
+        }
+        #articleCSharp{
+        background-color:rgb(203, 228, 149);
+        border: 2px solid black;
+        padding:2px ;
+        margin: 2px;
+        }
+        #MainSection
+        {
+          width: 80%;
+          display: inline-block;
+
+        }
+        #MainAsid
+        {
+         width: 19%;
+         border: 2px solid black;
+         display: inline-block;
+        }
+      article  header{
+        text-align: center;
+        background-color: rgb(190, 125, 78);
+      }
+        article  footer{
+        text-align: center;
+        background-color: rgb(190, 125, 78);
+      }
+      #mytable{
+        border-collapse: collapse;
+      }
+    </style>
+</head>
+<body>
+    
+    <header id="MainHeader">
+             <h1>Welcome in My Layout </h1> 
+    </header>
+    <nav id="MainNav">
+        <ul>
+            <li> <a href="#">HOME</a></li>
+            <li> <a href="#">Product</a></li>
+            <li> <a href="#">Client</a></li>
+            <li> <a href="#">About</a></li>
+        </ul>
+    </nav>
+    <Section id="MainSection">
+        <article id="articleSql">
+            <header>
+                SQL Server Query 
+            </header>
+            <div>
+               <p>
+                A SQL Server query is a statement or command written in Transact-SQL (T-SQL), 
+                the dialect of SQL used by Microsoft SQL Server, to interact with and manage 
+                data within a SQL Server database. These queries are used to perform various
+                 operations, including retrieving, inserting, updating, and deleting data,
+                  as well as defining and modifying database structures.
+               </p>
+            </div>
+            <footer>
+                     Firday , Exam :( First 5 Day
+            </footer>
+        </article>
+         <article id="articleCSharp">
+            <header>
+                C# Programming 
+            </header>
+            <div>
+                  <p>
+                    C# (pronounced "C-Sharp") is a modern, object-oriented programming language 
+                    developed by Microsoft as part of the .NET framework. 
+                    It is a versatile, high-level language that supports multiple programming 
+                    paradigms, including imperative, declarative, functional, generic, 
+                    and component-oriented programming
+                  </p>
+            </div>
+            <footer>
+                 Firday , Exam :( First 5 Day
+            </footer>
+        </article>
+    </Section>
+    <asid id="MainAsid">
+            <h4> FaceBook</h4>
+            <h4> Youtube</h4>
+    </asid>
+    <details> 
+       
+        C# (pronounced "C-Sharp") is a modern, object-oriented programming language 
+       <ul>
+            <li> C# Basic  </li>
+            <li> C# Advanced</li>
+            <li> C# OOP </li>
+        </ul>
+        <summary>
+            C#
+        </summary>
+    </details>
+
+    <table border="1" id="mytable">
+        <tr>
+            <th> ID</th>
+            <th> Name</th>
+            <th> Age</th>
+            <th> Job</th>
+        </tr>
+        <tr>
+            <td> 1</td>
+            <td> Mohamed</th>
+            <td> 25</th>
+            <td> Developer</th>
+        </tr>
+         <tr>
+            <td> 2</td>
+            <td> Hoda</th>
+            <td> 26</th>
+            <td> Developer</th>
+        </tr>
+    </table>
+
+    <br>
+    <img src="images/currandox2.jpg" width="400">
+
+    <br>
+    <br>
+    <!--autoplay loop="loop" -->
+    <video src="images/Dev.mp4"  controls="controls" poster="images/Picture1.png" >
+         <source src="Dev.mp4" type="video/mp4">
+         <source src="Dev.ogg" type="video/ogg">
+         <!--<track src="Dev_en.vtt" kind="subtitles" srclang="en" label="English">-->
+        Your Browser Not support Video Tag ...
+    </video>
+  <br>
+    <audio controls>
+    <source src="horse.ogg" type="audio/ogg">
+    <source src="images/Ana Le Habiby.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+    </audio>
+
+    <footer id="MainFooter">
+           Smart Software <sup>&copy;</sup>2025
+    </footer>
+</body>
+</html>

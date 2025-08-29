@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <hr>
+    <a href="3-M3 Introduction to JavaScript.html">Back </a>
+    <hr>
+
+    <h1> Input &amp; output Variables in Javascript </h1>
+
+
+    <h2> input &amp; output :-</h2>
+    -------------------
+    <pre>
+            Windows -- > Browser
+           ---------------------- 
+     </pre>
+    <script>
+        window.alert("Welcome in JavaScript"); // output
+        window.prompt("What is your script ? ", "HTML5,CSS3,JavaScript"); //input
+    </script>
+    <pre>
+        documents --> For Page As Object
+        ----------------------------------
+</pre>
+    <script>
+        document.write("Welcome in<h1> JavaScript </h1>");
+    </script>
+    <pre>
+        -Variables:- 
+        ------------ 
+        Case Sensitive X not x -- >
+         Java script is loosely Type Can't Know the datatype after asing datavalue 
+         
+</pre>
+    <script>
+        var x = 5; //----> datatype is number
+        var greeting = "Hello";
+        document.write(typeof(x)); //----> number Typeof(greeting);
+        document.write(typeof(greeting));
+    </script>
+    <pre>
+            string output &amp; input in javascript Alert ---- >
+     </pre>
+    <script>
+        window.alert("Hello"); //--->Message
+        prompt("Enter your name", "Name"); //--->Inputbox must reserved by var 
+        var name = prompt("Enter your name", "Name");
+        document.write(" Welcome " + name);
+    </script>
+    <h3>Data type in Javascript </h3>
+    <pre>
+            
+            -String in string " --> \" ' -->\'
+            -Numbers Integer , FloatingPoint ---> Nan(Not a Number) 
+            -Boolean 
+            -Null value
+            -Undefined
+            -Object --> Object var person={Id:1,Name:"Sayed",Salary:3000};
+
+    </pre>
+    <h3>Convert Function in JavaScript Paresint , Number , eval();</h3>
+    <script>
+        var x = "123s";
+        var y = 12;
+
+        var total1 = parseInt(x) + parseInt(y);
+        document.write(total1);
+
+        var total2 = Number(x) + Number(y);
+        document.write(total2);
+
+        //var total3 = eval(x) + eval(y);
+        //document.write(total3);
+
+
+        //var x = "s123";
+
+        //var total1 = parseInt(x) + parseInt(y);
+        //document.write(total1);
+
+
+        //var total2 = Number(x) + Number(y);
+        //document.write(total2);
+
+        //var total3 = eval(x) + eval(y);
+        //document.write(total3);
+    </script>
+    <h1>Array in JavaScript :- </h1>
+
+    <script>
+        //1-
+        var colorArr = new Array();
+        colorArr[0] = "red";
+        colorArr[1] = "yellow";
+        colorArr[2] = "Blue";
+        //2-   
+        var colorArr = new Array(3);
+        colorArr[0] = "red";
+        colorArr[1] = "yellow";
+        colorArr[2] = "Blue";
+        //3-
+        var colorArry = ["red", "yellow", "blue"];
+
+        //for access to elemet 
+        //1- to assign 
+        colorArr[2] = "Black";
+        //2-to read
+        document.write(colorArr[1]);
+
+
+        var arr = new Array(4);
+        arr[0] = "sayed";
+        arr[1] = 50;
+        arr[2] = new Array("sayed", "Maryim", "retaj");
+        arr[3] = false;
+        arr[6] = "Welcome ";
+
+        delete arr[3];
+
+
+        window.alert("Welcome in JavaScript");
+        window.prompt("What is your script ? ", "HTML5,CSS3,JavaScript");
+        document.write(arr[1]);
+        document.write("<br/>")
+        document.write(arr[4]);
+        document.write("<br/>")
+        document.write(arr[6]);
+        document.write("<br/>")
+        document.write(arr[5]);
+        document.write("<br/>")
+        document.write(arr[2]);
+        document.write("<br/>")
+        document.write(arr[2][1]);
+        document.write("<br/>")
+        document.write(arr);
+        document.write("<br/>")
+        document.write("delete : " + arr[3]);
+        document.write("<br/>")
+
+        document.write(typeof(arr[2][0]));
+        document.write("<br/>")
+        document.write(typeof(arr[1]) == "Number".toLowerCase());
+    </script>
+</body>
+
+</html>

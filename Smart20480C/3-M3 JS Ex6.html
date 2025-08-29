@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script>
+        function showcv() {
+            document.getElementById("chechCV").onclick = function() {
+                if (document.getElementById("chechCV").checked) {
+                    document.getElementById("CV").style.display = "block";
+                } else {
+                    document.getElementById("CV").style.display = "none";
+                }
+            }
+
+            document.getElementById("CV").style.display = "none";
+        }
+
+        //window.onload = function() {
+        //      showcv();
+        //  }
+        window.addEventListener("load", showcv, false);
+    </script>
+</head>
+
+<body>
+    <hr>
+    <a href="3-M3 Introduction to JavaScript.html">Back</a>
+    <hr>
+    <section id="Personal">
+        <table>
+            <tr>
+                <td> First name :</td>
+                <td><input type="text" id="txtfirstname" placeholder="Enter First Name" /></td>
+            </tr>
+            <tr>
+                <td> Second Name :</td>
+                <td><input type="text" id="txtsecondname" placeholder="Enter First Name" /></td>
+            </tr>
+            <tr>
+                <td> </td>
+                <td><input type="checkbox" id="chechCV" /> Create CV</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="CV">
+        <table>
+            <tr>
+                <td> Projects</td>
+                <td><input type="text" id="txtproject" /></td>
+            </tr>
+            <tr>
+                <td> Courses</td>
+                <td></td>
+                <td><input type="checkbox" id="Checkbox1" />C#</td>
+                <td><input type="checkbox" id="Checkbox2" />HTML5</td>
+                <td><input type="checkbox" id="Checkbox3" />JavaScript</td>
+            </tr>
+        </table>
+    </section>
+
+    <h2>remove an event listener:</h2>
+    <input type="button" value="click Me to remove Listener " onclick=" RemoveListener() ;">
+    <script>
+        //remove an event listener:
+        function Show() {
+            document.getElementById("txtfirstname").style.color = "red";
+        }
+
+        var targe = document.getElementById("txtfirstname");
+        targe.addEventListener("focus", Show, false);
+
+
+        var targe = document.getElementById("txtfirstname");
+        targe.addEventListener("blur", function() {
+            targe.style.color = "black";
+        }, false);
+
+
+        function RemoveListener() {
+            targe.removeEventListener("focus", Show, false);
+        }
+    </script>
+</body>
+
+</html>

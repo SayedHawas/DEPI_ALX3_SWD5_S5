@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <hr>
+    <a href="3-M3 Introduction to JavaScript.html">Back</a>
+    <hr>
+    <h1>1-Function in javascript </h1>
+    <p>
+        Function Block of code Like Void Without return
+    </p>
+
+    <input type="button" value="Click me" onclick="sayHello()" />
+    <script>
+        //Void
+        function print() {
+            document.write("Hello in JavaScript ");
+        }
+        print();
+
+        function sayHello() {
+            document.write("Hello");
+        } //to call function
+    </script>
+    <br>
+
+    <h2>2- Function With parameters</h2>
+    <code>
+      <pre>
+            function show(name)
+             {
+                  document.write("Welcome "+ name);
+             }
+      </pre>
+    </code>
+
+    <input type="button" value="Click me" onclick="show('Retaj And Mariam');" />
+    <br>
+    <p> Using function With DOM </p>
+    <br>
+    <input type="text" id="txtName" placeholder="Enter your Name : " />
+    <input type="button" id="btnOK" value="Click Me" onclick="show(document.getElementById('txtName').value)" />
+    <script>
+        function show(name) {
+            document.write("Welcome " + name);
+        }
+    </script>
+    <br>
+    <h2>3- With Mulit Paramenters:-</h2>
+
+    <script>
+        function print(tag, text) {
+            document.write("<" + tag + ">" + text + "</" + tag + ">");
+        }
+
+        print("h1", "Smart software");
+
+        //can Built function By pass arguments
+        function print2(tag, text) {
+            document.write("<" + print.arguments[0] + ">" + text + "</" + tag + ">");
+        }
+    </script>
+    <br>
+    <h2>4 - like function with return</h2>
+
+    <code>
+    <pre>
+            function sum (x , y) 
+            {
+                 var z = parseInt(x) + parseInt(y); 
+                 return z;
+            }
+    </pre>
+</code>
+    <script>
+        function sum(x, y) {
+            var z = parseInt(x) + parseInt(y);
+            return z;
+        }
+        //Call
+        document.write(sum(100, 50));
+    </script>
+    <br>
+    <h2>5- Recursive method</h2>
+    <script>
+        function factorial(Number) {
+            if (Number == 1)
+                return 1;
+            else
+                return Number * factorial(Number - 1);
+        }
+        //Call
+        document.write(factorial(5) + "<br />");
+    </script>
+
+    <h2>6- With Block ---(Like Using in C# );</h2>
+    <script>
+        with(document) {
+            document.write(factorial(5) + "<br />");
+            document.write(factorial(6) + "<br />");
+            document.write(factorial(7) + "<br />");
+        }
+    </script>
+    <h2 style="color:red;">7- Anonymous function</h2>
+
+    <script>
+        var EmployeeSalary = function(salary, bouns) {
+            return salary + bouns;
+        }
+
+        document.write(EmployeeSalary(1000, 200));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <hr>
+    <a href="3-M3 Introduction to JavaScript.html">Back</a>
+    <hr>
+    <h1>Statements in javascript</h1>
+    <h2> If Condition </h2>
+    <code>
+    <pre>
+            -----------If ------------------
+            If(Condition){
+            
+            statements if True ;
+            }
+            Other statements 
+            -----------------------------
+            Demo:-
+    </pre>
+</code>
+
+    <script>
+        var x = 6;
+        if (x < 10) {
+            document.write("Welcome in JavaScript <br /> ");
+        }
+    </script>
+    <h2> If Else Condition </h2>
+    <code>
+             <pre>
+                    if(condition)
+                    {
+                      statements if True ;
+                    }
+                    else 
+                    {
+                      statements if false;
+                    }
+                    Other statements
+             </pre>
+         </code>
+
+    <script>
+        var Date = new Date();
+        var h = parseInt(Date.getHours());
+        if (h < 12)
+            document.write(h + "Good morning");
+        else
+            document.write((h - 12) + "Good evening ");
+
+        document.write(h);
+    </script>
+
+    <h2> If Else IF Condition </h2>
+    <code>
+    <pre>
+            -----------------------------------
+            * Java scritp  Support IF else if
+            ----------------------------------
+            if(condition1)
+            {
+              statements if True ;
+            }
+            else if(condition2 )
+            {
+              statements if True ;
+            }
+            else if(condition3 )
+            {
+              statements if True;
+            }
+            else 
+            {
+              statements  false;
+            }
+            Other statements
+    </pre>
+</code>
+
+    <script>
+        var Date = new Date();
+        var h = parseInt(Date.getHours());
+        if (h < 12) {
+            document.write(h + "Good morning");
+        } else if (h < 18) {
+            document.write((h - 12) + "Good afternoon ");
+        } else {
+            document.write((h - 12) + "Good evening ");
+        }
+        document.write(h);
+    </script>
+    <h2> Switch:- </h2>
+    <Code>
+        <pre>
+                var day = prompt("Enter numebr of day","");
+                 day = parseInt(day); 
+                 switch(day) 
+                 {
+                      case 1:
+                      case 2:
+                      case 3:
+                      alert("businss Day ");
+                    break; 
+                       case 4:
+                       case 5:
+                       alert("hafe week"); 
+                       break; 
+                       case 6 : 
+                       case 7 : 
+                       alert("holiday"); 
+                       break; 
+                       default:
+                       alert ("Invalid Day"); 
+                       break; 
+                    }
+        </pre>
+    </Code>
+    <script>
+        var day = prompt("Enter numebr of day", "");
+        day = parseInt(day);
+        switch (day) {
+            case 1:
+            case 2:
+            case 3:
+                alert("businss Day ");
+                break;
+            case 4:
+            case 5:
+                alert("hafe week");
+                break;
+            case 6:
+            case 7:
+                alert("holiday");
+                break;
+            default:
+                alert("Invalid Day");
+                break;
+        }
+    </script>
+
+
+</body>
+
+</html>

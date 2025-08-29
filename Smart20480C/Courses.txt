@@ -1,0 +1,16 @@
+﻿{
+  "Courses" : [
+    { 
+      "CourseName" : "C#",
+      "Price" : "200"
+      },
+    { 
+      "CourseName" : "HTML 5 and JavaScript",
+       "Price" : "300"
+      },
+    { 
+      "CourseName" : "ASP.Net MVC5",
+       "Price" : "400"
+      }
+  ]
+}
