@@ -1,0 +1,621 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="Scripts/jquery-3.3.1.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#Para1").html("<h1> welcome From JQuery <h1> ");
+        });
+    </script>
+
+    <style>
+        .classdemo {
+            color: blue;
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align:center">Module3 :Introduction to JavaScript</h1>
+    <hr width=50%>
+    <ol>
+
+        <li>
+            <h4 style="color:blue;">Overview of JavaScript </h4>
+        </li>
+        <li>
+            <h4 style="color:blue;"> Introduction to the Document Object Model</h4>
+        </li>
+        <li>
+            <h4 style="color:blue;">  Introduction to jQuery</h4>
+        </li>
+    </ol>
+    <hr>
+    <h2><span style="color:red;">Lesson 1</span> : Overview of JavaScript</h2>
+    <img src="images/1.PNG" width="500">
+    <ol>
+        <li>What is JavaScript?</li>
+        <li>JavaScript Syntax</li>
+        <li>Variables, Data Types, and Operators</li>
+        <li>Functions</li>
+        <li>Conditional Statements</li>
+        <li>Looping Statements</li>
+        <li>Using Object Types</li>
+        <li>Defining Arrays of Objects by Using JSON</li>
+    </ol>
+
+    <h3>JavaScript Syntax</h3>
+    <p>
+        A JavaScript statement represents a line of code to be run<br> Terminate statements with a semicolon
+    </p>
+
+    <code>
+        <pre>
+                var thisVariable = 3;
+                counter = counter + 1;
+                GoDoThisThing();
+                document.write("An incredibly really \
+                very long greeting to the world");
+        </pre>
+    </code>
+
+    <script>
+        var thisVariable = 3;
+        counter = counter + 1;
+        GoDoThisThing();
+        document.write("An incredibly really very long greeting to the world");
+    </script>
+
+
+    <code>
+        <pre>
+            Use comments to add notes to your scripts
+            document.write("I'm learning JavaScript"); // display a message
+            /* You can use a multi-line comment
+            to add more information */ 
+    </pre>
+    </code>
+    <script>
+        document.write("I'm learning JavaScript"); // display a message
+        /* You can use a multi-line comment
+        to add more information */
+    </script>
+    <hr>
+    <h3>Variables, Data Types, and Operators</h3>
+    <p>Use var to declare variables</p>
+    <code>
+        <pre>
+    var answer = 3;
+    var actuallyAsString = "42";
+    </pre>
+    </code>
+    <script>
+        var answer = 3;
+        var actuallyAsString = "42";
+    </script>
+    <h4>JavaScript has three simple types</h4>
+    <h5>String, Number, and Boolean</h5>
+    <h5>Variables can also be undefined or null</h5>
+
+    <code>
+        <pre>
+        var noValue; // noValue has the value undefined
+        var nullValue = null; // null is different to undefined
+    </pre>
+    </code>
+    <script>
+        var noValue; // noValue has the value undefined
+        var nullValue = null; // null is different to undefined
+    </script>
+
+    <a href="3-M3 Js Ex0.html">Ex Variables </a>
+
+    <h4>JavaScript supports many operators</h4>
+    <ul>
+        <li>Arithmetic</li>
+        <li>assignment</li>
+        <li>comparison</li>
+        <li>Boolean</li>
+        <li>conditional</li>
+        <li>string</li>
+    </ul>
+    <br>
+
+    <a href="3-M3 Js Ex1.html">Ex Javacript operators </a>
+
+
+    <hr>
+    <h1 style="display: inline; color:red; border-bottom: 2px solid #000;">Conditional Statements </h1>
+    <h2>JavaScript provides two conditional constructs</h2>
+    <h2>IF:</h2>
+    <code>
+        <pre>
+            if (TotalAmountPaid > AdvancePaid) {
+                GenerateNewInvoice();
+             } else {
+               WishGuestAPleasantJourney();
+             }
+             
+    </pre>
+    </code>
+    <h2>switch</h2>
+    <code>
+        <pre>
+            var RoomRate;
+            switch (typeOfRoom) {
+              case "Suite":
+                RoomRate = 500;
+                break; 
+              case "King":
+                RoomRate = 400;
+                break;
+              default:
+                RoomRate = 300;
+            }
+    </pre>
+    </code>
+    <br>
+
+    <a href="3-M3 Js Ex2.html">Ex Javacript Conditional Statements </a>
+    <hr>
+    <h1 style="display: inline; color:red; border-bottom: 2px solid #000;">Looping Statements </h1>
+    <h2>JavaScript provides three loop constructs </h2>
+    <h2>while:</h2>
+    <code>
+        <pre>
+                while (GuestIsStillCheckedIn())
+                {
+                  numberOfNightsStay += 1;
+                }
+        </pre>
+    </code>
+    <h2>do while: </h2>
+    <code>
+        <pre>
+                do {
+                    eatARoundOfToast();
+                  } while (StillHungry())
+
+        </pre>
+    </code>
+    <h2>for:</h2>
+    <code>
+        <pre>
+                for (var i=0; i<10; i++) {
+                                    plumpUpAPillow();
+                                    }
+        </pre>
+    </code>
+    <br>
+    <a href="3-M3 Js Ex3.html">Ex Javacript Loop Statements </a>
+    <hr>
+    <h1 style="display: inline; color:red; border-bottom: 2px solid #000;">Functions </h1>
+    <h2>Functions are named blocks of reusable code:</h2>
+    <code>
+        <pre>
+            function aName( argument1, argument2, …, argumentN ) {
+                statement1;
+                statement2;
+                …
+                statementN;
+              }
+              
+    </pre>
+    </code>
+    <div style="background-color:darkgray;border:1px solid #000;border-radius: 20px ; display: inline-block; padding: 10px; ">
+        - Arguments are only accessible inside the function<br> - A function can return a value <br> - A function can also declare local variables<br> - Global variables defined outside of a function are available<br> to all functions in scripts referenced
+        by a page
+
+    </div>
+    <br>
+    <a href="3-M3 Js Ex4.html">Ex Javacript Function </a>
+
+    <hr>
+    <h1 style="display: inline; color:red; border-bottom: 2px solid #000;">Using Object Types</h1>
+    <h2>JavaScript has a number of built-in object types:</h2>
+    <h3>String, Date, Array, RegExp</h3>
+    <code>
+        <pre>
+            var seasonsArray = ["Spring", "Summer", "Autumn", "Winter"];
+            …
+            var autumnLocation = seasonsArray.indexOf("Autumn");
+    </pre>
+    </code>
+
+    <code>
+        <pre>
+                var re = new RegExp("[dh]og"); 
+                if (re.test("dog")) {...}
+        </pre>
+    </code>
+    <div><label for="txtMobileID">Mobile : </label></div>
+    <div><input type=text id="txtMobileID" Name="txtMobile" placeholder="01#-########"></div>
+    <input type="button" value="click Me" onclick="CheckMobile('txtMobileID','^01[0-2,5]{1}[0-9]{8}$')">
+    <script>
+        function CheckMobile(inputID, RegExpPattern) {
+            var inputMobile = document.getElementById(inputID);
+            var re = new RegExp(RegExpPattern);
+            if (re.test(inputMobile.value)) {
+                alert("Your Mobile is : " + inputMobile.value);
+                //  return true;
+            } else {
+                alert("Please Enter correct Mobile ... !");
+                inputMobile.value = "";
+                inputMobile.focus();
+                // return false;
+            }
+        }
+    </script>
+    <br>
+    <h3> With Function For Validation </h3>
+    Mobile :
+    <input type="text" name="name" value="" id="txtMobile" />
+    <br />
+    <input type="button" name="name" value="Click Me" onclick="RegCheck('show', 'txtMobile', '^01[0-2,5]{1}[0-9]{8}$', 'Plz Enter Mobile');" />
+    <p id="show"></p>
+    <script>
+        function CheckFun(IdString, regExp) {
+            var Result = false;
+            var x = document.getElementById(IdString).value;
+            var re = new RegExp(regExp);
+            if (re.test(x)) {
+                Result = true;
+            }
+            return Result;
+        }
+
+        function RegCheck(Loaction, IdString, regExp, ErrorMsg) {
+            if (!CheckFun(IdString, regExp)) {
+                document.getElementById(Loaction).innerHTML = ErrorMsg;
+            } else {
+                document.getElementById(Loaction).innerHTML = "";
+            }
+        }
+    </script>
+    <br>
+    <hr />
+    <h1>Exception Handling </h1>
+    <h2>Try ....Catch  .... Finally</h2>
+    <code>
+        <pre>
+    try
+    {
+    test Code ;
+    }
+    catch{
+    Code when Run Error;
+    }
+    Finally
+    {
+    code run In Run Or Error;
+    }           
+    </pre>
+    </code>
+    <p id="try"></p>
+    <p id="try1"></p>
+    <script>document.write("<h4> Demo 2 Of Try Catch </h4>");</script>
+    <p id="try2"></p>
+    <script>
+        function show(name) {
+            try {
+                if (name == "")
+                    throw "Empty parameter";
+                return "your Name is " + name;
+            }
+            catch (exception) {
+                if (exception == "Empty parameter")
+                    return "Can not enter Empty Name";
+            }
+        }
+
+        document.getElementById("try").innerHTML = show("Sayed Hawas");
+        document.getElementById("try1").innerHTML = show("");
+
+    </script>
+
+    <script>
+        try {
+            var Myarray;
+            for (var i = 0; i < 10; i++) {
+                document.getElementById("try2").innerHTML = Myarray[i] + "<br />";
+            }
+
+        } catch (ex) {
+            document.getElementById("try2").innerHTML = ex + "<br />";
+            document.getElementById("try2").innerHTML += ex.Name + "<br />";
+            document.getElementById("try2").innerHTML += ex.message + "<br />";
+        }
+    </script>
+    <hr>
+    <h4>
+        JavaScript also provides singleton types providing useful functionality:
+        Math, Global
+    </h4>
+
+    <script>
+        var x = -100.66;
+        var y = Math.abs(Math.round(x));
+        document.write("result is " + y);
+
+        //global
+
+        function Sum() {
+            var n1, n2;
+            const c1 = 100;
+            //const c2;
+            let l1 = 200;
+            //let l1 = 400;
+
+        }
+        Sum();
+    </script>
+    <hr>
+    <h2 style="display: inline; color:red; border-bottom: 2px solid #000;">Defining Arrays of Objects by Using JSON</h2>
+    <h3>JSON is a format for serializing objects:</h3>
+    <code>
+        <pre>
+            var attendees = [
+            {
+                "name": “Eric Gruber",
+                "currentTrack": "1"
+            },
+            {
+                "name": “Martin Weber",
+                "currentTrack": “2"
+            }
+        ]
+    </pre>
+    </code>
+    <p>JavaScript provides APIs for serializing and parsing JSON data</p>
+    <script>
+        var Employees = [{
+            "ID": "1",
+            "Name": "sayed",
+            "Job": "Developer",
+            "Salary": "5000"
+        }, {
+            "ID": "2",
+            "Name": "Retaj",
+            "Job": "DR",
+            "Salary": "7000"
+        }]
+
+        document.write("<br />---------------------- <br />");
+
+        for (var i in Employees) {
+            document.write(Employees[i].ID + " " + Employees[i].Name + " " + Employees[i].Job + " " + Employees[i].Salary + "<br />");
+        }
+        document.write("<br />---------------------- <br />");
+
+        for (var i = 0; i < Employees.length; i++) {
+            document.write(Employees[i].ID + " " + Employees[i].Name + " " + Employees[i].Job + " " + Employees[i].Salary + "<br />");
+
+        }
+        document.write("<br />---------------------- <br />");
+
+        for (key in Employees) {
+            if (Employees.hasOwnProperty(key)) {
+                document.write(Employees[key].ID + " " + Employees[key].Name + " " + Employees[key].Job + " " + Employees[key].Salary + "<br />");
+
+            }
+        }
+    </script>
+
+    <hr>
+
+    <h1 style="text-align: center"><span style="color:red; "> Lesson 2</span>: Introduction to the Document Object Model</h1>
+    <hr width=50%>
+
+    <ul>
+        <li>The Document Object Model</li>
+        <li>Finding Elements in the DOM</li>
+        <li>Adding, Removing, and Manipulating Objects in the DOM</li>
+        <li>Handling Events in the DOM</li>
+    </ul>
+
+
+    <h3>The Document Object Model</h3>
+    <p>The DOM provides a programmatic API for controlling a browser and accessing the contents of a web page:</p>
+    <ul>
+        <li> Finding and setting the values of elements on a page</li>
+        <li>Handling events for controls on a page</li>
+        <li>Modifying the styles associated with elements</li>
+        <li>Serializing and deserializing a page as an XML document</li>
+        <li>Validating and updating web pages</li>
+    </ul>
+
+    <h2 style="border-bottom: 2px solid red;">Finding Elements in the DOM</h2>
+
+    <p>Given the following form:</p>
+    <code>
+        <pre>
+            &lt;form name="contactForm"&gt;
+            &lt;input type="text" name="nameBox"   id="nameBoxId" /&gt;
+            &lt;/form&gt;     
+    </pre>
+    </code>
+
+    <form name="contactForm">
+        Name : <input type="text" name="nameBox" id="nameBoxId" />
+    </form>
+    <p><strong> can reference the form by using:</strong></p>
+
+    <code>
+        <pre>
+            document.forms[0]   // forms is a zero-based array
+            document.forms["contactForm"]
+            document.forms.contactForm
+            document.contactForm            
+    </pre>
+    </code>
+    <script>
+        document.forms[0] // forms is a zero-based array
+        document.forms["contactForm"]
+        document.forms.contactForm
+        document.contactForm
+    </script>
+    <p><strong>You can reference the nameBox text box by using:</strong></p>
+    <code>
+        <pre>
+            document.forms.contactForm.elements[0]
+            document.forms.contactForm.elements["nameBox"]
+            document.forms.contactForm.nameBox
+            document.contactForm.nameBox
+            document.getElementById("nameBoxId")
+    </pre>
+    </code>
+    <script>
+        document.forms.contactForm.elements[0]
+        document.forms.contactForm.elements["nameBox"]
+        document.forms.contactForm.nameBox
+        document.contactForm.nameBox
+        document.getElementById("nameBoxId")
+    </script>
+
+    <hr>
+    <h2>Adding, Removing, and Manipulating Objects in the DOM</h2>
+    <p><strong>To modify an element on a page:</strong></p>
+    <ol>
+        <li>Create a new object containing the new data.</li>
+        <li>Find the parent element that should contain the new data.</li>
+        <li>Append, insert, or replace the data in the element with the new data.</li>
+        <li>To remove an element or attribute:</li>
+        <li>Find the parent element.</li>
+        <li>Use <strong>removeChild</strong> or<strong>removeAttribute</strong> to remove the data.</li>
+    </ol>
+    <a href="3-M3 JS Ex5.html">Ex About Add &amp; Removing Elements </a>
+
+    <hr>
+    <h2>Handling Events in the DOM</h2>
+
+    <p>The DOM defines events that can be triggered by the browser or by the user<br> Many HTML elements define callbacks that run when an event occurs:</p>
+
+    <code>
+        <pre>
+            var helpIcon = document.getElementById("helpIcon");
+              document.images.helpIcon.onmouseover = 
+              function() { window.alert('Some help text'); };
+    </pre>
+    </code>
+    <br>
+    <h2>define event listeners </h2>
+    <br>
+    <input type="text" id="txtTest" value="Welcome in JS" />
+    <br>
+    <br>
+    <input type="text" id="txtTest2" value="Welcome in JS" />
+    <script>
+        var Mytext = document.getElementById("txtTest");
+        Mytext.addEventListener("mouseover", function () {
+            Mytext.style.color = "red";
+        }, false);
+
+        Mytext.addEventListener("mouseout", function () {
+            Mytext.style.color = "black";
+        }, false);
+
+
+
+        var Mytext2 = document.getElementById("txtTest2");
+        Mytext2.addEventListener("focus", function () {
+            if (Mytext2.value == "Welcome in JS")
+                Mytext2.value = "";
+            else
+                Mytext2.value = Mytext2.value;
+        }, false);
+
+        Mytext2.addEventListener("blur", function () {
+            if (Mytext2.value == "" || Mytext2.value == 0)
+                Mytext2.value = "Welcome in JS";
+            else
+                Mytext2.value = Mytext2.value;
+        }, false);
+    </script>
+    <br>
+    <a href="3-M3 JS Ex6.html"> Add Or Remove Event  Listener </a>
+
+    <hr>
+    <h1 style="color:red; text-align: center;">Lesson 3: Introduction to jQuery</h1>
+    <hr width=50%>
+    <h3>The jQuery Library</h3>
+    <p>jQuery provides portability for JavaScript code, enabling you to easily build cross-browser web applications:</p>
+
+    <p id="Para1"></p>
+
+
+
+    <h2 class="demo">
+        Selecting Elements and Traversing the DOM by Using jQuery
+    </h2>
+    <h2 class="demo">jQuery uses the same selector syntax as CSS</h2>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".demo").each(function () {
+                this.style.color = "red";
+            });
+        });
+    </script>
+    <hr>
+    <h1>jQuery provides additional functions for traversing and filtering elements </h1>
+    <h2>Adding, Removing, and Modifying Elements by Using jQuery</h2>
+
+    <p>Use the <strong>selector </strong> function to specify the elements to change or remove</p>
+
+    <h3>Common methods include:</h3>
+    <ul>
+        <li>addClass $("p").addClass("strike");</li>
+        <li>append $("ul").append("&lt;li&gt;New item&lt;/li&gt;");</li>
+        <li>detach $(#Warning").detach(); </li>
+        <li>html $("h1").html("&lt;hgroup&gt;…&lt;/hgroup&gt;");</li>
+        <li>replaceWith $(#Warning").replaceWith("&lt;p&gt;Panic over!&lt;/p&gt;"); </li>
+        <li>val $("input[type=text").val(); </li>
+    </ul>
+
+
+    <p id="element1"> Welcome in Jquery Selector</p>
+    <ul id="element2"></ul>
+    <p id="Warning"> welcome in JQuery</p>
+    <div id="element3">
+        <P id="element4"> welcome </P>
+
+        <input type="text" value="JQuery with input " name="txt">
+        <br>
+        <br>
+        <input type="button" value="Click Me" id="btn">
+        <p id="showresult"></p>
+        <script>
+            $(document).ready(function () {
+                $("#element1").addClass("classdemo");
+                $("#element2").append("<li> Javascript </li>");
+                $("#element2").append("<li> JQuery </li>");
+
+                /* $("#Warning").detach();*/
+
+                // $("#element3").html("<h1> Jquery </h1> <h2> Jquery  elements </h2> ");
+
+                //$("#element4").replaceWith("<p>Jquery write Less Do More !</p>");
+
+                var x = $("input[name=txt]").val();
+
+                $("#btn").click(function () {
+                    $("#showresult").text(x);
+                });
+            });
+        </script>
+
+        <hr>
+        <h1>Handling Control Events by Using jQuery</h1>
+        <p>
+            Use the jQuery selector function to find the item that raises the event<br> Use the bind method (or a jQuery shortcut) to bind the event handler to the event
+        </p>
+
+</body>
+</html>

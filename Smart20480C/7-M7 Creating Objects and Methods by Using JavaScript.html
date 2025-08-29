@@ -1,0 +1,252 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .Code {
+            background-color: rgba(128, 128, 128, 0.77);
+            border-radius: 10px;
+            padding-right: 10px;
+            display: inline-block;
+        }
+    </style>
+
+</head>
+<body>
+    <h1 style="text-align:center">Module7 Creating Objects and Methods by Using JavaScript</h1>
+    <hr width=50%>
+    <ol>
+        <li>
+            <h4 style="color:blue;">Writing Well-Structured JavaScript Code</h4>
+        </li>
+        <li>
+            <h4 style="color:blue;"> Creating Custom Objects </h4>
+        </li>
+        <li>
+            <h4 style="color:blue;">Extending Objects</h4>
+        </li>
+    </ol>
+    <hr>
+    <h2><span style="color:red;">Lesson 1</span> Writing Well-Structured JavaScript Code</h2>
+    <ul>
+        <li> Scoping and Hoisting</li>
+        <li> Managing the Global Namespace</li>
+        <li> Singleton Objects and Global Functions in JavaScript</li>
+    </ul>
+    <hr />
+    <h1>Scoping and Hoisting</h1>
+    <h2>JavaScript variables have one of two scopes:</h2>
+    <ul>
+        <li> Global scope</li>
+        <li>Local scope within a function</li>
+    </ul>
+
+    <h2>JavaScript does not support block scope</h2>
+    <h3>If you declare a variable inside a block, it is hoisted to function scope</h3>
+
+    <div class="Code">
+        <code>
+            <pre>
+     var num = 7;
+        function demonstrateScopingAndHoisting() {
+        if (true) {
+        var num = 42;
+        }
+        alert("The value of num is " + num);     // Displays 42, not 7.
+        }  
+    </pre>
+        </code>
+    </div>
+
+    <script>
+        var num = 7;
+        function demonstrateScopingAndHoisting() {
+            if (true) {
+                var num = 42;
+            }
+            alert("The value of num is " + num);     // Displays 42, not 7.
+        }
+        demonstrateScopingAndHoisting();
+    </script>
+    <hr />
+    <h1>Managing the Global Namespace</h1>
+    <h3>Global name clashes can be problematic in JavaScript</h3>
+    <p>Your global variables might conflict with other global variables elsewhere in the web application</p>
+
+    <p>JavaScript provides several mechanisms to avoid global name clashes</p>
+    Immediate functions
+    Namespaces<br />
+    Strict mode<br />
+    <hr />
+    <h1>Singleton Objects and Global Functions in JavaScript</h1>
+    <h3>JavaScript defines several singleton objects, such as:</h3>
+    <ul>
+        <li>Math</li>
+        <li>JSON</li>
+    </ul>
+    <h3>JavaScript also defines global functions, such as:</h3>
+    <ul>
+        <li>parseInt()</li>
+        <li>parseFloat()</li>
+        <li>isNan()</li>
+    </ul>
+    <hr />
+    <h1>Lesson 2: Creating Custom Objects</h1>
+    <h2>Creating Simple Objects</h2>
+    <p>There are several ways to create new objects in JavaScript:</p>
+
+    <script>
+        var employee1 = new Object();
+        var employee2 = {};
+
+
+
+    </script>
+    <h2>You can define properties and methods on an object:</h2>
+    <p id="showData"></p>
+    <script>
+        var employee1 = {};
+        employee1.name = "sayed hawas";
+        employee1.age = 35;
+        employee1.salary = 5000;
+
+        employee1.payRise = function (amount) {
+            // Inside a method, "this" means the current object.
+            this.salary += amount;
+            return this.salary;
+        }
+
+        document.getElementById("showData").innerHTML = "Name : " + employee1.name + " age : " + employee1.age + " Salary :" + employee1.payRise(500);
+    </script>
+
+    <hr />
+    <h1>Using Object Literal Notation</h1>
+    <h3>
+        Object literal notation provides a shorthand way to create new objects and assign properties and methods:
+    </h3>
+    <p id="showData1"></p>
+    <script>
+        var employee2 = {
+            name: "Retaj elSayed",
+            age: 7,
+            salary: 500,
+
+            payRise: function (amount) {
+                this.salary += amount;
+                return this.salary;
+            },
+
+            displayDetails: function () {
+                document.getElementById("showData1").innerHTML = "Name : " + employee2.name + " age : " + employee2.age + " Salary :" + employee2.payRise(100);
+            }
+        };
+
+        employee2.displayDetails();
+
+    </script>
+
+
+    <hr />
+    <h1>Using Constructors</h1>
+    <h2>Constructor functions define the shape of objects</h2>
+    <h4>They create and assign properties for the target object</h4>
+    <h4>The target object is referenced by the <span style="color:blue;"> this</span> keyword</h4>
+    <script>
+        var Account = function (id, name) {
+            this.id = id;
+            this.name = name;
+            this.balance = 0;
+            this.numTransactions = 0;
+        };
+    </script>
+
+    <h3>
+        Use the constructor function to create new objects with the specified properties:
+    </h3>
+    <p id="showData2"></p>
+    <script>
+        var acc1 = new Account(1, "Retaj");
+        var acc2 = new Account(2, "Mariam");
+
+        document.getElementById("showData2").innerHTML = acc1.id + " " + acc1.name + "<br />";
+        document.getElementById("showData2").innerHTML += acc2.id + " " + acc2.name + "<br />";
+    </script>
+
+    <hr />
+    <h1>Using Prototypes</h1>
+    <h3>
+        All objects created by using a constructor function have their own copy of the properties defined by the constructor
+    </h3>
+    <p>
+        All JavaScript objects, including constructors, have a special property named <strong>prototype</strong> <br />
+        Use the prototype to share function definitions between objects:
+    </p>
+
+    <script>
+        Account.prototype = {
+            deposit: function (amount) {
+                this.balance += amount;
+                this.numTransactions++;
+            },
+
+            // Plus other methods…
+        };
+    </script>
+
+    <br />
+
+    <hr />
+    <h1>Using the Object.create Method</h1>
+    <h2>Use Object.create() to create an object based on existing prototype</h2>
+    <p3> Pass in a prototype object</p3>
+    <h4>Optionally pass in a properties object that specifies additional properties to add to the new object</h4>
+    <a href="7-M7 Ex1 Object in JS.html"> Function in Object </a>
+    <hr />
+    <h1>Lesson 3: Extending Objects</h1>
+    <h2>Implementing Encapsulation</h2>
+    <p>
+        To define private members for an object, declare variables in the constructor and omit the this keyword<br />
+        To define public accessor functions for an object, declare methods in the constructor and include the <strong>this</strong>  keyword
+    </p>
+
+    <script>
+        //var Person = function (name, age) {
+        //    // Private properties.
+        //    var _name, _age;
+
+        //    // Public accessor functions. 
+        //    this.getName = function () {
+        //        return _name;
+        //    }
+        //}
+    </script>
+    <hr />
+    <h1>Implementing Inheritance by Chaining Prototypes</h1>
+    <p>
+        Define the base constructor and prototype<br />
+        Define the derived constructor<br />
+        Set the <strong>prototype</strong>  property of the derived constructor to an instance of the base object
+
+    </p>
+    <p id="demo1"></p>
+    <script>
+        var person = {
+            Id: 0,
+            Name: "",
+            work: function () {
+                return "do";
+            }
+        }
+
+        var student = new Object();
+        student.prototype = person;
+        student.Id = 1;
+        student.Name = "ahmed";
+        student.work = "student";
+
+        document.getElementById("demo1").innerHTML =student.Id + " " + student.Name + " " + student.work;
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <hr>
+    <a href="3-M3 Introduction to JavaScript.html">Back</a>
+    <hr>
+    <h1>Loop:-</h1>
+    <h2> For , While , DoWhile </h2>
+    <h3>For </h3>
+    <code>
+        <pre>
+                for(var i =0; i<10;i++)
+                {
+                   document.write(" number  : " + i + "<br/>");
+                } 
+        </pre>
+    </code>
+    <script>
+        for (var i = 0; i < 10; i++) {
+            document.write(" number  : " + i + "<br/>");
+        }
+    </script>
+
+    <h3> with array :-</h3>
+
+    <script>
+        var colorArry = new Array("red", "yellow", "blue");
+        for (var i = 0; i < colorArry.length; i++) {
+
+            document.write(colorArry[i] + "<br/>");
+        }
+    </script>
+    <h3> , With For </h3>
+
+    <script>
+        for (var i = 0, y = 5; i < 10; i++, y++) {
+            document.write(y * i + "<br />");
+        }
+    </script>
+    <h3> For in (like Foreach in C# ) </h3>
+
+    <script>
+        var arr = [77, 55, 66, 12, 44];
+        arr.sort(); // ---Method 
+        arr.length; // ---Properity
+        arr.reverse();
+        document.write(arr.toString()); // string , string , string ,
+
+        for (var i in arr) {
+            document.write("index : " + i); //index
+            document.write(" value  " + arr[i] + "<br />"); // Value 
+        }
+    </script>
+    <h3> While:-</h3>
+
+    <code>
+    <pre>
+            var x =0;
+            while(x<10)
+            {
+               document.write(" number  : " + x + "<br/>");
+               x++
+            }
+    </pre>
+</code>
+    <script>
+        var x = 0;
+        while (x < 10) {
+            document.write(" number  : " + x + "<br/>");
+            x++
+        }
+    </script>
+
+    .................................................
+    <h3DoWhile:->
+        </h3>
+        <code>
+         <pre>
+                Do    Run one At less if condtion is Breaken 
+     
+                Demo:-
+                ------
+                var y=0;
+                do{
+                   document.write(" number  : " + y + "<br/>");
+                   y++
+                }while(y&lt;10);
+         </pre>
+     </code>
+        <script>
+            var y = 0;
+            do {
+                document.write(" number  : " + y + "<br/>");
+                y++
+            } while (y < 10);
+        </script>
+
+
+        <h2>Jump statements (Continue , Break , (label= goto in C# )</h2>
+
+        <h3>break :- </h3>
+
+        <script>
+            for (var i = 0; i < 10; i++) {
+                if (i > 5)
+                    break;
+                document.writeln(i + "<br/>");
+            }
+        </script>
+
+        <p> debugger; as breakPoint in code
+        </p>
+        <script>
+            var arr = new Array(1, 2, 3, 4, 5, 6, 7);
+            debugger;
+            var sum = 0;
+            for (var i = 0; i < arr.length; i++) {
+                if (i % 2 == 0)
+                    sum += arr[i];
+            }
+            document.write("the total is " + sum);
+        </script>
+
+        <h3> Continue:-</h3>
+
+        <script>
+            for (var i = 0; i < 10; i++) {
+                if (i < 5)
+                    continue;
+                document.writeln(i + "<br/>");
+            }
+        </script>
+</body>
+
+</html>

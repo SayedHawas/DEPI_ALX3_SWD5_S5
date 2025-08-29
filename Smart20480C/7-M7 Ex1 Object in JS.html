@@ -1,0 +1,278 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .Code {
+            background-color: rgba(128, 128, 128, 0.77);
+            border-radius: 10px;
+            padding-right: 10px;
+            display: inline-block;
+        }
+    </style>
+   
+</head>
+<body>
+    <h1>Create Method in Object</h1>
+
+    <code class="Code">
+        <pre>
+         //Object in JavasScript
+         var Employee = new Object();  // Object (O) upper case
+         Employee.ID = 1;
+         Employee.Name = "Sayed";
+         Employee.Salary = 3000;
+
+             netSalary: function ()
+             {
+                 document.write(Client.payment + 200 );
+             }
+        </pre>
+    </code>
+    <script>
+        //Object in JavasScript
+        var Employee = new Object();  // Object (O) upper case
+        Employee.ID = 1;
+        Employee.Name = "Sayed";
+        Employee.Salary = 3000;
+
+        netSalary: function () {
+            document.write(Client.payment + 200);
+        }
+    </script>
+
+
+    <h2> using :-</h2>
+
+    <code class="Code">
+        <pre>
+         document.write("Welcome " + Employee.Name + "<br />");
+        document.write("Your salary is : " + Employee.Salary + "<br />");
+        netSalary();
+
+        Employee.Salary = 4000;
+        netSalary();
+        </pre>
+    </code>
+    <script>
+        document.write("Welcome " + Employee.Name + "<br />");
+        document.write("Your salary is : " + Employee.Salary + "<br />");
+        netSalary();
+
+        Employee.Salary = 4000;
+        netSalary();
+    </script>
+    <hr />
+    <h1> To Access to Field in Object</h1>
+
+<pre>
+    -By (.)
+    Employee.Name= "Mohamed";
+
+    -Like Array
+    Employee["Salary"] = 5000;
+
+    -By Variables
+    var x = "Salary";
+    Employee[x]=6000;
+    document.write(Employee.Salary);
+</pre>
+    <hr />
+    <h1>For in  (Like Foreach)</h1>
+
+<pre> for(var i in Employee)
+    {
+
+    }</pre>
+
+    <script>
+        for (var i in Employee) {
+            document.write
+                ("Field : " + i + "=" + Employee[i] + "<br />");
+        }
+    </script>
+
+    <hr />
+    <h1> Add & Remove Properties in Object :-</h1>
+    <h2> Add:-</h2>
+
+    <code class="Code">
+        <pre>
+    //Object in JavasScript
+    var Employee = new Object();  // Object (O) upper case
+    Employee.ID = 1;
+    Employee.Name = "Sayed";
+    Employee.Salary = 3000;
+</pre>
+    </code>
+    <script>
+        document.write("<br />")
+        //Object in JavasScript
+        var Employee = new Object();  // Object (O) upper case
+        Employee.ID = 1;
+        Employee.Name = "Sayed";
+        Employee.Salary = 3000;
+
+    </script>
+   
+
+    <script>
+        Employee.Job = "Developer";
+        Employee.SayWelcome = function () {
+            document.write("Welcome ");
+        }
+        for (var i in Employee) {
+            document.write
+                ("Field : " + i + "=" + Employee[i] + "<br />");
+        }
+
+    </script>
+
+    <hr />
+    <h1>
+        Demo Add Method :-
+    </h1>
+    <code class="Code">
+        <pre>
+     //Object in JavasScript
+        var Employee = new Object();  // Object (O) upper case
+        Employee.ID = 1;
+        Employee.Name = "Sayed";
+        Employee.Salary = 3000;
+         -------------------------------------------
+        Employee.Job = "Developer";
+        Employee.SayWelcome = function () {
+            document.write("Welcome ");
+        }
+</pre>
+    </code>
+
+    <script>
+        //Object in JavasScript
+        var Employee = new Object();  // Object (O) upper case
+        Employee.ID = 1;
+        Employee.Name = "Sayed";
+        Employee.Salary = 3000;
+    </script>
+    <script>
+        //Append Field & Method
+        Employee.Job = "Developer";
+        Employee.SayWelcome = function () {
+            document.write("Welcome ");
+        }
+        document.write("<br />")
+        for (var i in Employee) {
+            document.write
+                ("Field : " + i + "=" + Employee[i] + "<br />");
+        }
+
+    </script>
+
+    <hr />
+    <h1>
+        Remove(Delete):-
+    </h1>
+
+    <code class="Code">
+        <pre>
+     delete Employee.Salary;
+</pre>
+    </code>
+    <script>
+        //Object in JavasScript
+        var Employee = new Object();  // Object (O) upper case
+        Employee.ID = 1;
+        Employee.Name = "Sayed";
+        Employee.Salary = 3000;
+    </script>
+
+    <script>
+        document.write("<br />")
+        //delete
+        delete Employee.Salary;
+        for (var i in Employee) {
+            document.write
+                ("Field : " + i + "=" + Employee[i] + "<br />");
+        }
+    </script>
+
+    <hr />
+    <h1>  Operator (in) with Object :-</h1>
+
+
+    <script>
+        //Object in JavasScript
+        var Employee = new Object();  // Object (O) upper case
+        Employee.ID = 1;
+        Employee.Name = "Sayed";
+        Employee.Salary = 3000;
+    </script>
+
+    <script>
+        document.write("<br />")
+        var bool = "Name" in Employee;   // If field exists  ---(true)
+        document.write(bool);
+        document.write("<br />")
+    </script>
+    <hr />
+    <h1>Object Logical in Javascript :-</h1>
+    <h3>
+        1-Case :-
+    </h3>
+    <script>
+        //Object in JavasScript
+        var Employee = new Object();  // Object (O) upper case
+        Employee.ID = 1;
+        Employee.Name = "Sayed";
+        Employee.Salary = 3000;
+
+        //Object in JavasScript
+        var Manager = new Object();  // Object (O) upper case
+        Employee.ID = 1;
+        Employee.Name = "Sayed";
+        Employee.Salary = 3000;
+    </script>
+
+
+    <script>
+        var Employee2 = Manager;
+        var b = Employee == Manager;
+        var bo = Employee === Manager;
+        document.write(b);           //-->false
+        document.write("<br />")
+        document.write(bo);          //-->false
+    </script>
+
+    <h3>2-Case 2 :-</h3>
+
+    <script>
+        //Object in JavasScript
+        var Employee = new Object();  // Object (O) upper case
+        Employee.ID = 1;
+        Employee.Name = "Sayed";
+        Employee.Salary = 3000;
+
+        //Object in JavasScript
+        var Manager = new Object();  // Object (O) upper case
+        Employee.ID = 1;
+        Employee.Name = "Sayed";
+        Employee.Salary = 3000;
+    </script>
+
+    <script>
+        var Employee2 = Manager;
+        var b = Employee == Manager;
+        var bo = Employee === Manager;
+        document.write(b);           //-->false
+        document.write("<br />")
+        document.write(bo);          //-->false
+
+        var Employee2 = Manager;
+        var boo = Employee2 == Manager;
+        document.write("<br />")
+        document.write(boo);        //--True
+    </script>
+
+</body>
+</html>

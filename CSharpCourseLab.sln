@@ -37,6 +37,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day11HTMLCssLab", "Day11HTM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day12Lab", "Day12Lab\Day12Lab.csproj", "{E2294B7E-AE92-4FB9-95D2-B515C6774864}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smart20480C", "Smart20480C\Smart20480C.csproj", "{BC7FD05B-3132-4A35-91CE-EC3AB81AE947}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day13Lab", "Day13Lab\Day13Lab.csproj", "{050B697E-9E91-46BA-93E8-4DEBA6BDB624}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +115,14 @@ Global
 		{E2294B7E-AE92-4FB9-95D2-B515C6774864}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2294B7E-AE92-4FB9-95D2-B515C6774864}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2294B7E-AE92-4FB9-95D2-B515C6774864}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC7FD05B-3132-4A35-91CE-EC3AB81AE947}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC7FD05B-3132-4A35-91CE-EC3AB81AE947}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC7FD05B-3132-4A35-91CE-EC3AB81AE947}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC7FD05B-3132-4A35-91CE-EC3AB81AE947}.Release|Any CPU.Build.0 = Release|Any CPU
+		{050B697E-9E91-46BA-93E8-4DEBA6BDB624}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{050B697E-9E91-46BA-93E8-4DEBA6BDB624}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{050B697E-9E91-46BA-93E8-4DEBA6BDB624}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{050B697E-9E91-46BA-93E8-4DEBA6BDB624}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

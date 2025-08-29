@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <h1>Module1 : Overview of HTML and CSS</h1>
+    <h2 style="text-align: center"><span style="font-weight:bold ;">Lesson 1</span> : Overview of HTML</h2>
+    <hr width="50%">
+    <ol>
+        <li> The Structure of an HTML Page</li>
+        <li>Tags, Elements, Attributes, and Content</li>
+        <li>Displaying Text in HTML</li>
+        <li>Displaying Images and Linking Documents in HTML</li>
+        <li>Gathering User Input by Using Forms in HTML</li>
+        <li>Demonstration: Creating a Simple Contact Form</li>
+        <li>Attaching Scripts to an HTML Page </li>
+    </ol>
+
+    <hr />
+    <h4> The Structure of an HTML Page</h4>
+
+    <div style="background-color:gray;border: 1px solid #000; width:350px">
+        <code>
+        &lt;p&gt;
+        &lt;strong&gt; Elements &lt;/strong&gt; consist of
+        &lt;strong&gt; content  &lt;/strong&gt; bookended by a
+        &lt;em&gt; start  &lt;/em&gt; tag and an  &lt;em&gt; end  &lt;/em&gt; tag.
+         &lt;/p&gt;
+    </code>
+    </div>
+
+    <br />
+    <hr />
+    <h1>An Introduction to HTML</h1>
+    <p>In this module, we look at the history of HTML and CSS.</p>
+    <h2>In the Beginning</h2>
+    <p>WorldWideWeb was created by Sir Tim Berners-Lee at CERN. </p>
+    To <strong>emphasize</strong> is to give extra weight to (a communication); <em>"Her gesture emphasized her words"</em>
+    <hr />
+    <h1>Lists</h1>
+    <ul>
+        <li>Notepad</li>
+        <li>Textmate</li>
+        <li>Visual Studio</li>
+    </ul>
+
+    <ol>
+        <li>Notepad</li>
+        <li>Textmate</li>
+        <li>Visual Studio</li>
+    </ol>
+
+    <hr/>
+    <h1> Images </h1>
+    <img src="images/currandox2.jpg" alt="My Web site logo For HTML5" title="HTML5" width="300">
+
+    <hr>
+    <h1>Link</h1>
+    <a href="default.html">Go To default Page</a>
+
+    <hr>
+    <h1>Nested Image into Link </h1>
+    <a href="default.html"><img src="images/robot_debugging.jpg" alt="Link" title="HTML5" width="100"></a>
+    <hr>
+    <h1>Forms in HTML</h1>
+    <form>
+        <fieldset style="width: 200px;">
+            <legend>Enter Your Information </legend>
+
+            <div><label for="txtNameid">Name : </label></div>
+            <div><input type="text" id="txtNameid" name="txtName" /> </div>
+            <div><label for="txtJobid">Job : </label></div>
+            <div><input type="text" id="txtJobid" name="txtJob" /> </div>
+            <input type="submit" value="Click Me " />
+        </fieldset>
+    </form>
+
+    <br>
+
+    <hr />
+    <h1>Attaching Scripts to an HTML Page</h1>
+    <p id=demo1>
+        HTML is static, but pages can use JavaScript to add dynamic behavior<br> Use the &lt;script&gt; element to specify the location of the JavaScript code:<br> The order of &lt;script&gt; elements is important <br> Make sure objects and functions
+        are in scope before they are used<br> Use the &lt;noscript&gt; element to alert users with browsers that have scripting disabled.<br>
+
+    </p>
+    <script>
+        document.getElementById("demo1").innerHTML += "<span style='color:red;'><strong> This Text From JavaScript </strong> </span> "
+    </script>
+
+    <hr>
+
+    <h2 style="text-align: center"><span style="font-weight:bold ;">Lesson 2</span> : Overview of CSS</h2>
+    <hr width="50%">
+    <ul>
+        <li>Overview of CSS Syntax</li>
+        <li> How CSS Selectors Work</li>
+        <li> How HTML Inheritance and Cascading Styles Affect Styling</li>
+        <li> Adding Styles to An HTML Page</li>
+    </ul>
+
+    <h4>All CSS rules have the same syntax:</h4>
+    <div style="background-color:gray;border: 1px solid #000; width:250px">
+        <pre>
+    selector {
+        property1:value;
+        property2:value;
+        ..
+        propertyN:value;
+      }
+    </pre>
+    </div>
+    <br> Comments are enclosed in &nbsp; <span style="color:forestgreen">/* … */ delimiters </span>
+    <br>
+
+</body>
+<ul>
+    <li>There are three basic CSS selectors</li>
+    <ol>
+        <li>The element selector: h2{}</li>
+        <li>The class selector: .myClass {}</li>
+        <li>The id selector: #thisId {}</li>
+    </ol>
+</ul>
+<hr>
+<h1>Adding Styles to An HTML Page</h1>
+<ol>
+    <li> in Line </li>
+    <li>Internal </li>
+    <li>External File JS</li>
+</ol>
+
+</html>

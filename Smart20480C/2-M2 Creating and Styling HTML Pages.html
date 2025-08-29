@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        #Para {
+            font-family: Arial, Candara, Verdana, sans-serif;
+            font-size: 16px;
+            font-style: italic;
+            font-weight: bold;
+        }
+        
+        #Para2 {
+            letter-spacing: 2em;
+            line-height: 16px;
+            text-align: left;
+            text-decoration: underline;
+            text-transform: lowercase;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center">Creating and Styling HTML Pages</h1>
+    <hr width=50%>
+    <ol>
+        <h2 style="color:blue;">
+            <li>
+                Creating an HTML5 Page
+            </li>
+        </h2>
+        <h2 style="color:blue;">
+            <li>
+                Creating an HTML5 Page
+            </li>
+        </h2>
+    </ol>
+    <hr>
+    <h3><span style="color:red;">Lesson 1</span> : Creating an HTML5 Page</h3>
+    <p>
+        What's New in HTML5?<br> Document Structure in HTML5<br> Text and Images in HTML5<br> Demonstration: Using HTML5 Features in a Simple Contact Form<br>
+    </p>
+    <br>
+    <h3>What's New in HTML5?</h3>
+    <div style="display: inline-block;">
+        <p> HTML5 provides many extensions over previous versions, including:</p><img src="images/Picture1.png" width="100" style="display: block; float: right;">
+        <ul>
+            <li>Rules for browser vendors</li>
+            <li> New elements that reflect modern web application development</li>
+            <li>JavaScript APIs that support desktop and mobile application capabilities</li>
+        </ul>
+    </div>
+    <hr>
+
+
+    <div style="display: inline-block; width:600px;">
+        <h3>Document Structure in HTML5</h3>
+        <p> HTML5 provides new elements to define the structure of a web page:</p>
+        <img src="images/Picture2.png" width="200" style="display: block; float: right;"> &lt;section&gt; to divide up main content<br> &lt;header&gt; and &lt;footer&gt; for page headers and footers<br> &lt;nav&gt; for navigations links <br> &lt;article&gt;
+        for stand-alone content <br> &lt;aside&gt; for quotes and sidebar content
+    </div>
+    <hr>
+    <h3>Text and Images in HTML5</h3>
+
+    HTML5 defines new text elements, including:<br>
+    <h4>&lt;hgroup&gt;</h4>
+    <strong>Deprecated</strong>
+    <hgroup>
+        <h1>My Recipes</h1>
+        <h2>Great to eat, easy to make</h2>
+    </hgroup>
+
+
+    <h4>&lt;time&gt;</h4>
+    <time datetime="2012-08-08">Today</time>
+
+    <h4>&lt;mark&gt;</h4>
+    <p>This text should be <mark>noted for future use.</mark>.</p>
+
+    <h4>&lt;small&gt;</h4>
+    <p>Heat your beans for five minutes. <small>Or until they are hot enough for you.</small></p>
+
+    <h4>&lt;figure&gt; and &lt;figcaption&gt;</h4>
+    <figure>
+        <img src="images/robot_running.jpg" alt="HTML5 Running " width="200" />
+        <figcaption>HTML5 Running</figcaption>
+    </figure>
+
+
+    <hr>
+    <h3><span style="color:red;">Lesson 2</span> : Styling an HTML5 Page</h3>
+    <ol>
+        <li>Understanding CSS Text Styles</li>
+        <li>The CSS Box Model</li>
+        <li>Styling Backgrounds in CSS</li>
+        <li>Demonstration: Adding CSS Styles to an HTML Page</li>
+        <li>Demonstration: Creating and Styling an HTML5 Page</li>
+    </ol>
+    <h3>CSS Text Styling supports:</h3>
+    <h4>Fonts </h4>
+
+    <p id="Para">
+        font-family : Arial, Candara, Verdana, sans-serif;<br> font-size : 16px;<br> font-style : italic;<br> font-weight : bold;<br>
+    </p>
+
+    <h4>Colors</h4>
+    <div style="background-color:red; width: 200px">
+        Welcome in Css color<br> color : rgb(128, 128, 0);<br> opacity: 0.6;<br>
+
+    </div>
+
+    <div style="background-color:red; width: 200px ;opacity: 0.4">
+        Welcome in Css color<br> color : rgb(128, 128, 0);<br> opacity: 0.4;<br>
+
+    </div>
+    <div style="background-color:rgb(128, 128, 0); width: 200px ;opacity: 0.6">
+        Welcome in Css color<br> color : rgb(128, 128, 0);<br> opacity: 0.6;<br>
+
+    </div>
+    <div style="background-color:rgba(128, 128, 0,.3); width: 200px ">
+        Welcome in Css color<br> color : rgba(128, 128, 0,.3);
+    </div>
+    <h4>Typography</h4>
+    <p id=Para2>
+        letter-spacing : 2em;<br> line-height : 16px;<br> text-align : left;<br> text-decoration : underline;<br> text-transform : lowercase;<br>
+    </p>
+
+    <hr>
+    <h2>The CSS Box Model</h2>
+    The CSS box model treats each element as a collection of four concentric boxes:<br>
+    <img src="images/Picture3.png" alt=" Box Model " width="500" />
+
+    <h3>CSS background properties:</h3>
+    <ul>
+        <li>background-image</li>
+        <li>background-size</li>
+        <li>background-color</li>
+        <li>background-position</li>
+        <li>background-origin</li>
+        <li>background-repeat</li>
+        <li>background-attachment</li>
+    </ul>
+</body>
+
+</html>

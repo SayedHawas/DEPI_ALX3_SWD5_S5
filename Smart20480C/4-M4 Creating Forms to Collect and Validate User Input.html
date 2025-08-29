@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        input {
+            border: solid 1px;
+        }
+        
+        input:invalid {
+            border-color: #f00;
+        }
+        
+        input:valid {
+            border-color: #0f0;
+        }
+        
+        .validatedFine {
+            border-color: #0f0;
+        }
+        
+        .validationError {
+            border-color: #f00;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align:center">Module 4 Creating Forms to Collect and Validate User Input </h1>
+    <hr width=50%>
+    <ol>
+        <h4 style="color:blue;">
+            <li>
+                Creating HTML5 Forms
+            </li>
+        </h4>
+        <h4 style="color:blue;">
+            <li>
+                Validating User Input by Using HTML5 Attributes
+            </li>
+        </h4>
+        <h4 style="color:blue;">
+            <li>
+                Validating User Input by Using JavaScript
+            </li>
+        </h4>
+    </ol>
+    <hr>
+    <h2><span style="color:red;">Lesson 1</span> : Creating HTML5 Forms</h2>
+    <ul>
+        <li> Declaring a Form in HTML5</li>
+        <li>HTML5 Input Types and Elements</li>
+        <li>HTML5 Input Attributes</li>
+    </ul>
+
+    <hr>
+    <h1>Declaring a Form in HTML5</h1>
+    <h3>Use an HTML5 form to gather user input:</h3>
+
+    <form name="userLogin" method="post" action="login.aspx">
+        <fieldset style="display: inline;">
+            <legend>Enter your log in details:</legend>
+            <div id=”usernameField” class="field">
+                <input id="uname" name="username" type="text" placeholder="First and Last Name" />
+                <label for="uname">User's Name:</label>
+            </div>
+            <div id="passwordField" class="field">
+                <input id="pwd" name="password" type="password" placeholder="Password" />
+                <label for="pwd">User's Password:</label>
+            </div>
+        </fieldset>
+        <br>
+        <br>
+        <input type="submit" value="Send" />
+    </form>
+
+
+    <hr>
+    <h1>HTML5 Input Types and Elements</h1>
+    <h5>HTML5 defines a wide range of new input types and elements, but not all are widely implemented </h5>
+    <select id="carManufacturer" name="carManufacturer">
+        <optgroup label="European">
+          <option value="volvo">Volvo</option>
+          <option value="audi">Audi</option>
+        </optgroup>
+        <optgroup label="American">
+          <option value="chrysler">Chrysler</option>
+          <option value="ford">Ford</option>
+        </optgroup>
+      </select>
+
+    <hr>
+    <h1>HTML5 Input Attributes</h1>
+    <p>Input attributes modify the behavior of input types and forms to provide better feedback and usability:</p>
+    <ul>
+        <li>autofocus</li>
+        <li>autocomplete</li>
+        <li>required</li>
+        <li>pattern</li>
+        <li>placeholder</li>
+    </ul>
+
+
+    <a href="4-M4 Form Ex1.html"> From in HTML  </a>
+    <hr>
+    <h1>Lesson 2: Validating User Input by Using HTML5 Attributes</h1>
+    <h2>Principles of Validation</h2>
+    <p>
+        - User input can vary in accuracy, quality, and intent<br> - Client-side validation improves the user experience<br> - Server-side validation is still necessary<br>
+    </p>
+    <hr>
+    <h1>Ensuring that Fields are Not Empty</h1>
+    <h3>Use the required attribute to indicate mandatory fields</h3>
+    <h5>The browser checks that they are filled in before submitting the form</h5>
+
+
+    <form>
+        <input id="contactNo" name="contactNo" type="tel" placeholder="Enter your mobile number" required="required" />
+        <input type="submit" value="Click ME">
+    </form>
+
+    <hr>
+    <h1>Validating Numeric Input</h1>
+    <h3>Use the min and maxattributes to specify the upper and lower limit for numeric data</h3>
+    <form>
+        percentage :<input id="percentage" type="number" min="0" max="100" />
+        <input type="submit" value="Click ME">
+    </form>
+
+    <hr>
+    <h1>Validating Text Input</h1>
+    <h3>Use the pattern attribute to validate text-based input by using a regular expression ( 2 digits and 3 uppercase letters ) </h3>
+    <form>
+        orderRef : <input id="orderRef" name="orderReference" type="text" pattern="[0-9]{2}[A-Z]{3}" title="2 digits and 3 uppercase letters" />
+        <input type="submit" value="Click ME">
+    </form>
+    <hr>
+    <h1>Styling Fields to Provide Feedback</h1>
+    <p>Use CSS to style input fields<br> Use the <strong>valid</strong> and <strong>invalid</strong> <u>pseudo-classes</u> to detect fields that have passed or failed validation
+    </p>
+
+    <form>
+        customer Name : <input id="customerName" name="customerName" type="text" required />
+        <input type="submit" value="Click ME">
+    </form>
+    <hr>
+    <h1>Lesson 3: Validating User Input by Using JavaScript</h1>
+    <h2>Handling Input Events</h2>
+    <h3>Catch the submit event to validate an entire form</h3>
+    <ul>
+        <li>Return true if the data is valid, false otherwise</li>
+        <li>The form is only submitted if the submit event handler returns true</li>
+    </ul>
+
+    <h3>Catch the input event to validate individual fields on a character-by-character basis</h3>
+    <ul>
+        <li>If the data is not valid, display an error message by using the setCustomValidity function</li>
+        <li>If the data is valid, reset the error message to an empty string</li>
+    </ul>
+
+    <hr>
+    <h1>Validating Input</h1>
+    <h2>Use JavaScript code to emulate unsupported HTML5 input types and attributes in a browser:</h2>
+
+    <form id="scoreForm" onsubmit="return validateForm();">
+        <div id="scoreField" class="field">
+            <input id="score" name="score" type="number" />
+        </div>
+        <br>
+        <input type="submit" value="send Data">
+    </form>
+
+
+    <script>
+        function isAnInteger(text) {
+            var intTestRegex = "/^\s*(\+|-)?\d+\s*$/";
+            return String(text).search(intTestRegex) != -1;
+        } 
+        function validateForm() {
+            if (!isAnInteger(document.getElementById('score').value))
+                return false; /* No, it’s not a number! Form validation fails */
+
+            return true;
+        }
+    </script>
+    <hr>
+    <h1>Ensuring that Fields are Not Empty</h1>
+    <h3>Use JavaScript code to ensure that a required field does not contain only whitespace:</h3>
+
+    <form id="scoreForm2" onsubmit="return validateForm2();">
+        <div id="penaltiesField" class="field">
+            <input id="penalties" name="penalties" type="text" required />
+            <br>
+            <input type="submit" value="send Data">
+        </div>
+    </form>
+
+    <script>
+        function isSignificant(text) {
+            var notWhitespaceTestRegex = "/[^\s]{1,}/";
+            return String(text).search(notWhitespaceTestRegex) != -1;
+        }
+
+        function validateForm2() {
+            if (!isSignificant(document.getElementById('penalties').value))
+                return false; /* No! Form validation fails */
+
+            return true;
+        }
+    </script>
+
+    <hr>
+    <h1>Providing Feedback to the User</h1>
+    <h3>Provide visual feedback to the user by defining styles and dynamically setting the class of an element: </h3>
+
+
+    <form id="scoreForm3" onsubmit="return validateForm3();">
+        <div id="scoreField" class="field">
+            <input id="score" name="score" type="number" />
+        </div>
+        <br>
+        <input type="submit" value="send Data">
+    </form>
+    <script>
+        function isAnInteger1(text) {
+            var intTestRegex = "/^\s*(\+|-)?\d+\s*$/";
+            return String(text).search(intTestRegex) != -1;
+        } 
+        function validateForm3() {
+            if (!isAnInteger1(document.getElementById('score').className = "validationError")) {
+                return false; /* No, it’s not a number! Form validation fails */
+            }
+            document.getElementById('score').className = "validatedFine";
+            return true;
+        }
+    </script>
+</body>
+
+</html>

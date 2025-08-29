@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <hr>
+    <a href="3-M3 Introduction to JavaScript.html">Back</a>
+    <hr>
+
+    <h1>Operators &amp; Expression in javascript</h1>
+    <h2> 1-Arithmetic Operators:- </h2>
+
+    <pre>
+            + ,-,*,/    ,    %Modules    ,     ++,--  (postfix, Prefix);
+            Demo:-
+
+     </pre>
+    <script>
+        var y = 10;
+        var x = 20;
+        document.write("the value for x " + x + "<br/>");
+        document.write("the value for y " + y + "<br/>");
+        var z = x + y;
+        document.write("+  ==> " + z + "<br/>");
+        var z = x - y;
+        document.write("-  ==> " + z + "<br/>");
+        var z = x / y;
+        document.write("/  ==> " + z + "<br/>");
+        var z = x * y;
+        document.write("*  ==> " + z + "<br/>");
+        //++ Postfix
+        document.write(x++ + "<br/>");
+        document.write("++   ==> " + x + "<br/>");
+        //++ Prefix
+        document.write(++x + "<br/>");
+    </script>
+
+    <h2> 2-Logical Operators:-</h2>
+    <pre>
+             &amp;&amp; || !(Not)
+             ----------------------
+             Demo:-
+         </pre>
+    <script>
+        //2-Logical Operators:-
+        // &&   ||   !(Not)
+        var b = true;
+        //Not
+        document.write("Not ! <br />")
+        document.write(!b + " <br />")
+            //and 
+        document.write("And && <br />")
+        b = x > 1 && y > 1;
+        document.write(b + "<br />")
+        b = x < 1 && y > 1;
+        document.write(b + "<br />")
+            //OR
+        document.write("OR || <br />")
+        b = x < 1 || y > 1;
+        document.write(b + "<br />")
+    </script>
+    <h2> 3-Comparison Operators:-</h2>
+    <pre>
+       ---------------------------
+        ==  != &lt; &lt; => >= === !== (value &amp; datatype) 
+        Demo;-
+   </pre>
+
+    <script>
+        var y = 10;
+        var x = 20;
+        var z = true;
+        document.write("Comparison Operators" + "<br/>");
+        document.write("-------------------- " + "<br/>");
+        z = x > y;
+        document.write("> " + z + "<br/>");
+        z = x < y;
+        document.write("< " + z + "<br/>");
+        z = x >= y;
+        document.write(">= " + z + "<br/>");
+        z = x <= y;
+        document.write("<= " + z + "<br/>");
+        y = 20;
+        z = x == y;
+        document.write("== " + z + "<br/>");
+        z = x === y;
+        document.write("=== " + z + "<br/>");
+    </script>
+    <h2> 4-Concatenation Operators:-</h2>
+    <pre>
+            ------------------------------ 
+            ( + ) 
+            Demo:-
+       </pre>
+
+    <script>
+        document.write("Concatenation Operators" + "<br/>");
+        document.write("----------------------- " + "<br/>");
+        var str1 = "Sayed ";
+        var str2 = "Hawas";
+        var FullName = str1 + str2;
+        document.write("Concatenation :  " + FullName + "<br/>");
+    </script>
+    <h2>5-Assignment Operators:-</h2>
+    <pre>
+                --------------------------- 
+                ( = , += , -= , *= , /= , %= ) 
+                Demo:-
+        </pre>
+    <script>
+        document.write("Assignment Operators" + "<br/>");
+        document.write("--------------------" + "<br/>");
+        var n1 = 3;
+        var total = 0;
+
+        total += 3;
+        document.write("+= " + total + "<br/>");
+        total *= 3;
+        document.write("*= " + total + "<br/>");
+        total /= 3;
+        document.write("/= " + total + "<br/>");
+        total -= 3;
+        document.write("-= " + total + "<br/>");
+        total = 7;
+        total %= 3;
+        document.write("%= " + total + "<br/>");
+        //with string += as Concatenation
+    </script>
+    <h2> 6-Conditional Expression Ternary ( ? : ):- </h2>
+    <pre>
+                --------------------------------------------- 
+                (conditional)? true : false ;
+                 demo:-
+        </pre>
+    <script>
+        document.write("Conditional Expression Ternary" + "<br/>");
+        document.write("------------------------------" + "<br/>");
+        var v1 = 15;
+        var v2 = 6;
+        var max = (v1 > v2) ? v1 : v2;
+        document.write("Max is : " + max);
+    </script>
+    <h2>Implementation Precedence</h2>
+
+    <ol>
+
+        <li>Parantheses</li>
+        <li>function call</li>
+        <li>Array</li>
+        <li>! Not </li>
+        <li> ++ </li>
+        <li>typeof</li>
+        <li>* , /, %</li>
+        <li>+ , -</li>
+        <li> &lt; , &lt;=,> , >=</li>
+        <li>== , != , === , !==</li>
+        <li>&amp;&amp;</li>
+        <li> ||</li>
+        <li>=</li>
+        <li>= , += , -= , *=, /= %=</li>
+    </ol>
+
+</body>
+
+
+</html>

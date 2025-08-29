@@ -1,0 +1,276 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        .Code {
+            background-color: rgba(128, 128, 128, 0.77);
+            border-radius: 10px;
+            padding-right: 10px;
+            display: inline-block;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1 style="text-align:center">Module 5 Communicating with a Remote Server </h1>
+    <hr width=50%>
+    <ol>
+        <li>
+            <h4 style="color:blue;">Sending and Receiving Data by Using the XMLHttpRequest Object</h4>
+        </li>
+        <li>
+            <h4 style="color:blue;">Sending and Receiving Data by Using the jQuery Library </h4>
+        </li>
+    </ol>
+    <hr>
+    <h2><span style="color:red;">Lesson 1</span> : : Sending and Receiving Data by Using the XMLHttpRequest Object</h2>
+    <ul>
+        <li>How a Browser Retrieves Web Pages </li>
+        <li> Using the XMLHttpRequest Object to Access Remote Data</li>
+        <li>Handling HTTP Errors</li>
+        <li>Consuming the Response </li>
+        <li>Handling an Asynchronous Response</li>
+        <li> Transmitting Data with a Request</li>
+    </ul>
+
+    <hr>
+    <h1>How a Browser Retrieves Web Pages</h1>
+    <h3>A web browser issues HTTP GET requests to fetch a web page to display</h3>
+    <ul>
+        <li> The response is parsed into a DOM structure</li>
+        <li> The browser renders the DOM structure</li>
+
+    </ul>
+    <img src="images/4.PNG" width="500">
+    <ul>
+        <li> Elements with a src attribute can initiate further HTTP GET requests</li>
+        <li>JavaScript code can trigger HTTP GET requests</li>
+    </ul>
+    <hr>
+    <h1>Using the XMLHttpRequest Object to Access Remote Data</h1>
+
+    <h2> To send an HTTP request:</h2>
+    <ol>
+        <li>Create a new XMLHTTPRequest object</li>
+        <li>Specify the HTTP method and URL</li>
+        <li>Set the request header</li>
+        <li>Send the request</li>
+    </ol>
+
+    <div class="Code">
+        <code>
+            <pre>
+    var request = new XMLHttpRequest();
+    var url = "http://contoso.com/resources/...";
+    request.open( "GET", url );
+    request.send();        
+    </pre>
+        </code>
+    </div>
+    <h2>Requests are asynchronous by default</h2>
+    <ul>
+        <li> To block and wait for a response:</li>
+    </ul>
+    <div class="Code">
+        <code>
+            <pre>
+    request.open( "GET", url , false);  
+    </pre>
+        </code>
+    </div>
+
+
+    <hr>
+    <h1>Handling HTTP Errors</h1>
+    <ul>
+        <li>Check the status code of the <strong>XMLHttpRequest</strong> object to verify that the request has been sent:</li>
+    </ul>
+
+    <div class="Code">
+        <code>
+            <pre>
+    var request = new XMLHttpRequest();
+    request.open("GET", "/luckydip/enter");
+    request.send( );
+    …
+    if( request.status != 200 ) {
+        alert( "Error " + request.status + " - " + request.statusText ); 
+    }
+    </pre>
+        </code>
+    </div>
+    <ul>
+        <li>
+            Wrap your code in a <strong>try…catch</strong> block to handle any unexpected network errors
+        </li>
+    </ul>
+
+
+    <hr>
+    <h1>Consuming the Response</h1>
+    <ul>
+        <li>Determine the type of data in the response</li>
+        <li>Read the response data from the <strong>responseText</strong> property</li>
+    </ul>
+
+    <div class="Code">
+        <code>
+            <pre>
+        var request = new XMLHttpRequest();
+        …
+        var type = request.getResponseHeader();
+            switch( type ) {
+                case "text/xml" :
+                    return request.responseXML;
+                case "text/json" :
+                    return JSON.parse(request.responseText);
+                default :
+                    return request.responseText;
+        }
+    </pre>
+        </code>
+    </div>
+
+    <hr>
+    <h1>Handling an Asynchronous Response</h1>
+    <ul>
+        <li>Create an event handler for the <strong>readystatechange</strong> event</li>
+        <li>Check that the ,<strong>readyState</strong> of the <strong>XMLHttpRequest</strong> object is set to 4</li>
+    </ul>
+
+
+    <div class="Code">
+        <code>
+            <pre>
+    request.onreadystatechange = function () {
+        if (request.readyState === 4) {
+            var response = JSON.parse(request.responseText);
+            ...
+        }
+    };
+    </pre>
+        </code>
+    </div>
+    <hr>
+    <h1>Transmitting Data with a Request</h1>
+    <ul>
+        <li>To send data to a server:</li>
+        <ol>
+            <li>Serialize the data</li>
+            <li>Set the Content-Type property of the request header</li>
+            <li>Transmit the data by using the HTTP POST method</li>
+        </ol>
+    </ul>
+    <div class="Code">
+        <code>
+            <pre>
+    var data = JSON.stringify(…);
+    var request = new XMLHttpRequest();
+    var url = …;
+    request.open("POST", url );
+    request.setRequestHeader("Content-Type", "text/plain" );
+    request.send(data);
+    </pre>
+        </code>
+    </div>
+    <br />
+    <a href="5-M5 XMLHttpRequestDemo.html">EX XMLHttpRequestDemo</a>
+    <hr>
+    <h1><span style="color:red;">Lesson 2</span> : Sending and Receiving Data by Using the jQuery Library</h1>
+    <ul>
+        <li>Using the jQuery Library to Send Asynchronous Requests </li>
+        <li> Using the jQuery ajax() Function</li>
+        <li> Serializing Forms Data by Using jQuery</li>
+        <li> Demonstration: Communicating with a Remote Data Source </li>
+    </ul>
+
+    <hr />
+    <h3>Using the jQuery Library to Send Asynchronous Requests</h3>
+    <p>
+        The jQuery library provides asynchronous methods for sending requests and handling the response:
+    </p>
+    <div class="Code">
+        <code>
+            <pre>
+   var response;
+ 
+$.get(' http://contoso.com/resources/...', function(data) {
+  response = data;
+}).error(function() {
+  alert("error occurred during get operation");
+});
+
+    </pre>
+        </code>
+    </div>
+    <p>
+        $.getJSON( url, body, callback );
+    </p>
+    <p>
+        $('#container').load( url, body, callback );
+    </p>
+
+    <hr />
+    <h1>Using the jQuery ajax() Function</h1>
+    <p>
+        The jQuery <strong>ajax()</strong>  function provides additional properties and finer control over HTTP requests
+    </p>
+    <div class="Code">
+        <code>
+            <pre>
+ $.ajax({
+    url: '/luckydip/enter',
+    type: 'GET',
+    timeout: 12000,
+    dataType: 'text'
+    }).done(function( responseText ){
+    $('#answer').text( responseText );
+    }).fail(function() {
+    alert('An error has occurred - you may not have been entered');
+    });
+    </pre>
+        </code>
+    </div>
+
+    <hr />
+    <h1>Serializing Forms Data by Using jQuery</h1>
+    <p>
+        To include forms data in a request, use the <strong>data</strong>  property:
+    </p>
+    <div class="Code">
+        <code>
+            <pre>
+   $.ajax({
+    url: '/luckydip/enterWithName',
+    type: 'POST',
+    timeout: 12000,
+    dataType: 'text',
+    data: {
+    firstName: myForm.fname.value,
+    lastName: myForm.lname.value
+    });
+    </pre>
+        </code>
+    </div>
+
+    <p>
+        To retrieve input data directly from a form, use the <strong>serializeArray()</strong>  function
+    </p>
+  
+
+
+
+
+
+
+
+</body>
+
+</html>
