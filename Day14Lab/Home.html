@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .lbl{
+        color: Red;
+        }
+    </style>
+</head>
+<body>
+      <h1> Welcome From Form HTML5</h1>
+      <form method="get" action="/"  autocomplete="on">
+        <fieldset>
+         <legend> My Information </legend>
+
+        <table>
+             <tr>
+                <td><label for="txtTitle" >Title : </label></td>
+                <td><input type="text" id="txtTitle"  name="title" disabled value="Smart Company"></td>
+            </tr>
+            <tr>
+                <td><label for="txtId" >ID : </label></td>
+                <td><input type="text" id="txtId"  name="Id" readonly value="1"></td>
+            </tr>
+            <tr>
+                <td><label for="txtUserName" id="lblusername" class="lbl">UserName : </label></td>
+                <td><input type="text" id="txtUserName"  name="userName" placeholder="UserName" required="required" title="Please Enter UserName"></td>
+            </tr>
+            <tr>
+                <td><label for="txtPassword" id="lblpassword" class="lbl">Password : </label></td>
+                <td><input type="password" id="txtPassword"  name="Password" placeholder="Password" ></td>
+            </tr>
+            <tr>
+                <td><label for="txttel"  class="lbl">Mobile : </label></td>
+                <td><input type="tel" id="txttel" pattern="^01[0-2,5][0-9]{8}$" title="Must Enter Mobile Like 01#########" name="Mobile" placeholder="Mobile" ></td>
+            </tr>
+              <tr>
+                <td><label for="txtEmail">Email : </label></td>
+                <td><input type="Email" id="txtEmail"  name="Eamil" placeholder="username@domain.com" ></td>
+            </tr>
+                <tr>
+                <td><label for="txtWebSite">linkedIn : </label></td>
+                <td><input type="url" id="txtWebSite"  name="txtWebSite"  ></td>
+            </tr>
+           
+             <tr>
+                <td><label>Date of Birth :</label></td>
+                <td><input type="date" id="date1" /></td>
+                <td><input type="week" id="date2" /></td>
+                <td><input type="month" id="date3" /></td>
+                <td><input type="datetime" id="date4" /></td>
+                <td><input type="datetime-local" id="date4" /></td>
+            </tr>
+            <tr>
+                <td><label>Salary :</label></td>
+                <td><input type="number" id="num1" min="100" max="10000" value="200" step="10" /></td>
+            </tr>
+            <tr>
+                <td><label>Volume :</label></td>
+                <td><input type="range" id="ren1" min="100" max="1000" value="200" step="1" /></td>
+            </tr>
+            <tr>
+                <td><label>color :</label></td>
+                <td><input type="color" id="color1" /></td>
+            </tr>
+            <tr>
+                <td><label>Gender :</label></td>
+                <td><input type="radio" id="radio2" value="male" name="gender" checked="checked" /> Male</td>
+                <td><input type="radio" id="Radio1" value="female" name="gender" />female</td>
+            </tr>
+            <tr>
+                <td><label>You Have A Car ? </label></td>
+                <td><input type="radio" id="radio2" value="Yes" name="Q"  /> Yes</td>
+                <td><input type="radio" id="Radio1" value="No" name="Q" />No</td>
+            </tr>
+            <tr>
+                <td><label>Q ? :</label></td>
+                <td><input type="checkbox" id="ch1" value="male" /> FAIT</td>
+                <td><input type="checkbox" id="ch2" value="female"  checked="checked"  />BMW</td>
+            </tr>
+            <tr>
+                <td><label>Search :</label></td>
+                <td><input type="search" id="cearch1" /> </td>
+            </tr>
+
+            <tr>
+                <td><label>progress bar :</label></td>
+                <td><progress id="progress1" max="100" value="50"> </td>
+            </tr>
+
+            <tr>
+                <td><label>My Laptop:</label></td>
+                <td>
+                    <select id="List1" name="Laptop">
+                        <option value="HP">HP</option>
+                        <option value="Dell" selected="selected">Dell</option>
+                        <option value="sony">Sony</option> 
+                         <option value="Mac">Mac</option> 
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Description:</label></td>
+                <td>
+                    <textarea id="textarea1" name="des" cols="50" rows="10"> 
+                </textarea>
+                </td>
+            </tr>
+            <tr>
+                <td><label>My laptop:</label></td>
+                <td>
+                    <input list="laptops" />
+                 <datalist id="laptops">
+                    <option value ="HP" ></option>
+                    <option value ="DEll" ></option>
+                    <option value ="Sony" ></option>
+                    <option value ="Mac" ></option>
+                </datalist>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label> Upload File :</label></td>
+                <td><input type="file" id="file" multiple="multiple" /> </td>
+            </tr>
+
+              <tr>
+                <td> <input type="submit" value=" Send Data"></td>
+                <td> <input type="reset" value=" Clean Data"></td>
+               <td> <button onclick="window.alert('Welcome');"> SayHello </button></td>
+            </tr>
+        </table>
+        
+               </fieldset>
+      </form>
+</body>
+</html>
