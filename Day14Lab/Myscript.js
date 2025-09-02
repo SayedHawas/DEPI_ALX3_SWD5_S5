@@ -1,0 +1,1 @@
+window.alert('Welcome in JavaScript From Extrenal File ....');

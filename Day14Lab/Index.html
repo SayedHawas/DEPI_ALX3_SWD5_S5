@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--External  Css JS -->
+    <!-- <script src="/Myscript.js"></script> -->
+    <link rel="stylesheet" href="Mystyle.css">
+    <!--Internal Css Js -->
+    <style>
+        h1{
+            text-align: center;
+        }
+    </style>
+    <script>
+       //window.alert('Welcome in JavaScript From Head ...');
+    </script>
+</head>
+<body>
+     
+
+        <table>
+            <tr>
+                <td><label For="Number1"> Number 1 : </label></td>
+                <td><input type="text" id="Number1" ></td>
+            </tr>
+            <tr>
+                <td><label For="Number2"> Number 2 : </label></td>
+                <td><input type="text" id="Number2" ></td>
+            </tr>
+            <tr>
+                <td colspan="2"> <button onclick="SumTwoNumbers('Number1','Number2','result')"> Sum Two Numbers </button></td>
+            </tr>
+             <tr>
+                <td colspan="2"> <output id="result"></output></td>
+            </tr>
+        </table>
+
+         <!--CSS  In-line-->
+         <h1 style="color:red;"> Welcome in JavaScript </h1>
+         <p id="myPara"> Welcome in JavaScript ...</p>
+         <pre>
+            Session 1: 
+            Introduction to JavaScript
+            Understanding the role of JavaScript in web development
+            Exploring the syntax and structure of JavaScript
+            Writing your first JavaScript code
+            Learning about variables, data types, and operators
+            Session 2:
+            Control Structures and Functions
+            Delving into control structures: if-else, loops, and switch statements
+            Understanding functions: declaration, parameters, return values, and scope
+            Working with arrays and objects in JavaScript
+            Event handling and interacting with the Document Object Model (DOM)
+            Browser Object Model (BOM)
+         </pre>
+
+         <button onclick="window.alert('Welcome in JavaScript From Button');">Say Hello</button>
+
+         <button onclick="FunCall();">Call Funcrion</button>
+          <button onclick="FunSayHello('ahmed');">Call Funcrion With Parameter</button>
+         <button onclick="Funsum(100,200);">Call Sum </button>
+         <script>
+            //DOM Document Object Model 
+            //myPara .text = "Hello " ;
+
+           //window.alert('Welcome in JavaScript From Body ...');
+         
+            var x = 5;  //---> datatype is number
+            var greeting = "Hello";
+           //string ,Number , bool 
+            console.log(x);
+            console.log(typeof(x));        //----> number
+            console.log(greeting);
+            console.log(typeof(greeting)); //----> string
+
+            //output & input in javascript 
+              var name = window.prompt("Enter Your Name : " , "");
+             // document.writeln("Hello : " + name);
+              //Operator  =   + , - , * , / , ++ ,== === < > ! Not && || 
+               
+              var x = 10;
+              x=500;
+
+             y=7>5 ;
+               console.log( y);
+              function sum()
+              {
+                
+              }
+
+              var x = 100;
+              var y = 200;
+              z=x+y;
+              console.log(z);
+              z=x-y;
+              console.log(z);
+               z=x*y;
+              console.log(z);
+               z=x/y;
+              console.log(z);
+
+              console.log(z++);
+              console.log(z);
+              console.log(++z);
+
+               console.log(x>y);
+               console.log(x<y);
+               console.log(x!=y);
+               console.log(x==y);
+               console.log(100 == '100');
+               console.log(100 === '100');
+               console.log(typeof(100)  + " / "+ typeof( '100'));
+
+
+               console.log(2>5 && 1!=3);
+              console.log(2>5 || 1!=3);
+
+
+              //Without return Without Parameters 
+              function FunCall()
+              {
+                 window.alert("Call Function"); 
+              }
+
+              function  FunSayHello(strname)
+              {
+               window.alert("Welcome " + strname); 
+              }
+
+              function  Funsum(x,y)
+              {
+                 z = x+y;
+                 console.log(z);
+                return z;
+              }
+
+
+              function SumTwoNumbers(x,y,result)
+              {
+                //debugger;
+                 var n1 = document.getElementById(x).value;
+                 var n2 = document.getElementById(y).value;
+
+                 document.getElementById(result).innerText = parseInt(n1)+ parseInt(n2);
+              }
+
+
+
+for(var i =0; i<10;i++)
+{
+   document.write(" number  : " + i + "<br/>");
+}
+
+var x =0;
+while(x<10)
+{
+   document.write(" number  : " + x + "<br/>");
+   x++
+}
+
+var y=0;
+do{
+   document.write(" number  : " + y + "<br/>");
+   y++
+}while(y<10)
+         </script>  
+</body>
+</html>

@@ -1,4 +1,6 @@
 ﻿using MyClassLibrary;
+using System.Text.RegularExpressions;
+
 
 namespace Day6Lab
 {
@@ -90,6 +92,19 @@ namespace Day6Lab
             //----------------------------
 
             #endregion
+
+            string str = "^01[0-2,5][0-9]{8}$";
+            string Entrey = "0123546585";
+            Regex res = new Regex(str);
+            if (res.Match(Entrey).Success)
+            {
+
+            }
+            else
+            {
+
+            }
+
         }
         //6 * 5  *4 * 3 * 2 * 1 
         public static long Factorial(int Number)
