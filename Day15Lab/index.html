@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <table>
+        <tr>
+            <td>Enter Your Name : </td>
+            <td><input type="text" id="txtname" ></td>
+        </tr>
+        <tr>
+            <td><button onclick="FunCheck('txtname')"> Check Name</button></td>
+        </tr>
+    </table>
+    <p id="para" style="color: red;"></p>
+    <table>
+        <tr>
+            <td><label> Number1</label></td>
+            <td><input type="text" id="number1" ></td>
+        </tr>
+         <tr>
+            <td><label> Number2</label></td>
+            <td><input type="text" id="number2" ></td>
+        </tr>
+         <tr>
+            <td><button onclick="FunSUM('number1','number2' ,'result' )"> SUM </button></td>
+            <td><output id="result"></td>
+        </tr>
+    </table>
+    <script>
+       
+       function FunSUM(x, y ,result)
+       {
+           var n1 = document.getElementById(x).value;
+           var n2 = document.getElementById(y).value;
+           document.getElementById(result).innerText = parseInt(n1) + parseInt (n2);
+       }
+
+
+       // ---3 Anonymous function
+       var EmployeeSalary =function(salary ,bouns){
+            return salary + bouns;
+        }
+        //call 
+        EmployeeSalary(15000,200);
+        
+        const x = 100;
+        console.log(x);
+
+
+        // x = 500;
+        // console.log(x);   Error Console
+
+        var y ;
+        console.log("value : " + y + " Type : " + typeof(y));
+
+
+        var z = 200;
+        console.log("value : " + z + " Type : " + typeof(z));
+
+        z=true;
+        console.log("value : " + z + " Type : " + typeof(z));
+
+        v ="Ahmed";
+        console.log("value : " + v + " Type : " + typeof(v));
+
+
+        let h = 200;
+        console.log("value : " + h + " Type : " + typeof(h));
+
+         h=true;
+        console.log("value : " + h + " Type : " + typeof(h));
+
+
+        vv = false;
+        console.log("value : " + vv + " Type : " + typeof(vv));
+
+
+        //Const , Var , Let , Local-Scope
+        // Controls Statments 
+        // --> Loop
+        document.writeln(" Loop For  <br>");
+        for(var i=0;i<10 ; i++)
+        {
+            var bb =  200;
+            document.writeln(" Number :  " + i + "<br>");
+        }
+
+        function  fun1()
+        {
+           
+
+        }
+        document.writeln(" Loop While <br>");
+        var l = 0 ;
+        while (l<10) {
+
+            document.writeln(" Number :  " + l++ + "<br>");
+            //l++;
+        }
+        document.writeln(" Loop DO <br>");
+        var l = 0 ;
+        do 
+         {
+            document.writeln(" Number :  " + l++ + "<br>");
+            //l++;
+        }while(l<10)
+
+       // --> IF Switch 
+        // if(Codition)
+        // {
+
+        // }
+        // else 
+        // {
+
+        // }
+
+
+        var bool = (16<20)? true : false;
+        console.log(bool);
+        function FunCheck(idInput)
+        {
+           name = document.getElementById(idInput).value ;
+           if(name ==="ahmed")
+           {
+              document.getElementById("para").innerText = "Welcome " + name;
+              document.getElementById("para").style.color = "green";
+           }
+           else 
+           {
+               document.getElementById("para").innerText = "Hi " + name;
+               document.getElementById("para").style.color = "red";
+           }
+
+        }
+
+        var day = prompt("Enter numebr of day","");
+            day = parseInt(day);
+            switch(day)
+            {
+                    case 1:
+                    case 2:
+                    case 3:
+                    alert("businss Day ");
+                        break;
+                    case 4:
+                    case 5:
+                    alert("hafe week");
+                    break;
+                    case 6 :
+                    case 7 :
+                        alert("holiday");
+                        break;
+                    default:
+                        alert ("Invalid Day");
+                        break;
+            }
+
+            
+            var N = null;
+             console.log("value : " + N + " Type : " + typeof(N));
+
+
+             //array 
+               // 1-
+                var colorArr= new Array();
+                colorArr[0]="red";
+                colorArr[1]="yellow";
+                colorArr[2]="blue";
+                //2-   
+                var colorArr= new Array(3);
+                colorArr[0]="red";
+                colorArr[1]="yellow";
+                colorArr[2]="Blue";
+                //3-
+                var colorArr = ["red","yellow","blue"];
+                document.writeln(" Array With For <br>");
+                for(var i =0 ; i< colorArr.length;i++ )
+                {
+                 document.writeln("<p style='color:"+colorArr[i]+"'> "+ colorArr[i] +"</p>")
+                }
+                 document.writeln("Array With For in <br>");
+                 for (const key in colorArr) {
+                   document.writeln("<p style='color:"+colorArr[key]+"'> "+ colorArr[key] +"</p>")
+                 }
+
+
+    </script>
+</body>
+</html>
