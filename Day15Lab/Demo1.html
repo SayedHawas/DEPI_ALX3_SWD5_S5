@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><label> Enter Your Name </label></td>
+            <td> <input type="text" id="txtName" ></td>
+            <td> <span id="errorSpan" style="display: none; color:red">*</span></td>
+            <td> <button onclick="validationText('txtName','errorSpan')"> Check Data</button></td>
+        </tr>
+         <tr>
+            <td><label> Enter Your Mobile </label></td>
+            <td> <input type="text" id="txtMobile" onfocus="validationText('txtName','errorSpan')"></td>
+            <td></td>
+        </tr>
+    </table>
+
+ <script>
+        function validationText(idInput ,errorSpan) {
+            var t = document.getElementById(idInput);
+            var ErrorSpan = document.getElementById(errorSpan);
+            if (t.value == 0 || t.value == null) {
+                     //alert('your must Enter Data ');
+                     ErrorSpan.style.display = 'block';
+                     t.style.borderColor = 'red';
+                     t.style.backgroundColor = 'yellow';
+                    t.focus();
+                    return false;
+            } else {
+                 ErrorSpan.style.display = 'none';
+                  t.style.borderColor = 'black';
+                   t.style.backgroundColor = 'white';
+                return true;
+            }
+        }
+    </script>
+    <p> Append Element By JS </p>
+    <br>
+    <br>
+    <br>
+    <div>
+       Entry Item  <input type="text" id="txtItem">
+       <br>
+       <button onclick="FunAddItem('txtItem','itemlist')"> Click to Add </button>
+        <ul id="itemlist">
+
+        </ul>
+    </div>
+    <script>
+     function FunAddItem(txtItem, UlShow)
+     {
+         var list = document.getElementById(UlShow);
+         var item = document.getElementById(txtItem).value;
+
+        var newElement =  document.createElement('li');  //<li> </li>
+        newElement.textContent = item;   //<li> Welcome </li>
+        list.appendChild(newElement);
+        
+        document.getElementById(txtItem).value = "";
+
+     }
+    </script>
+   
+</body>
+</html>

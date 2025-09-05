@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>  
+
+</head>
+<body>
+    <section id="Personal">
+       <table>
+           <tr>
+              <td> First name :</td>
+               <td><input type="text" id="txtfirstname" placeholder="Enter First Name" /></td>  
+           </tr>
+           <tr>
+              <td> Second Name :</td>
+               <td><input type="text" id="txtsecondname" placeholder="Enter First Name" /></td>  
+           </tr>
+           <tr>
+              <td> </td>
+               <td><input type="checkbox" id="chechCV" /> Create CV</td>  
+           </tr>
+       </table>
+    </section>
+
+    <section id="CV">
+         <table>
+           <tr>
+              <td> Projects</td>
+               <td><input type="text" id="txtproject" /></td>  
+           </tr>   
+           <tr>
+              <td> Courses</td>
+               <td></td>
+               <td><input type="checkbox" id="Checkbox1" />C#</td>  
+               <td><input type="checkbox" id="Checkbox2" />HTML5</td> 
+               <td><input type="checkbox" id="Checkbox3" />JavaScript</td> 
+           </tr>
+       </table>
+    </section>
+
+
+       <script>
+        debugger;
+        function showcv()
+        {
+            document.getElementById("chechCV").onclick = function() {
+                if(document.getElementById("chechCV").checked)
+                {
+                    document.getElementById("CV").style.display="block";
+                }else{
+                    document.getElementById("CV").style.display="none";
+                }
+            }
+
+            document.getElementById("CV").style.display="none";
+        }
+        //BOM
+        window.onload = function () { showcv(); }
+        //window.addEventListener("load", showcv, false);
+    </script>
+</body>
+</html>
