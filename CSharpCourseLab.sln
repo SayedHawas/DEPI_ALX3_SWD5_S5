@@ -45,6 +45,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day14Lab", "Day14Lab\Day14L
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day15Lab", "Day15Lab\Day15Lab.csproj", "{3AE9B238-8F6F-4763-9F8D-4AB1D784DFD6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day16WebApiLab", "Day16WebApiLab\Day16WebApiLab.csproj", "{7BEB2FE0-6F18-48AE-A0F8-723E75769574}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -135,6 +137,10 @@ Global
 		{3AE9B238-8F6F-4763-9F8D-4AB1D784DFD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3AE9B238-8F6F-4763-9F8D-4AB1D784DFD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3AE9B238-8F6F-4763-9F8D-4AB1D784DFD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BEB2FE0-6F18-48AE-A0F8-723E75769574}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BEB2FE0-6F18-48AE-A0F8-723E75769574}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BEB2FE0-6F18-48AE-A0F8-723E75769574}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BEB2FE0-6F18-48AE-A0F8-723E75769574}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
