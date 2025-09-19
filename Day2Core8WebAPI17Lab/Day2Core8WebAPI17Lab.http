@@ -1,0 +1,6 @@
+@Day2Core8WebAPI17Lab_HostAddress = http://localhost:5264
+
+GET {{Day2Core8WebAPI17Lab_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

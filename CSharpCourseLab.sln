@@ -47,6 +47,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day15Lab", "Day15Lab\Day15L
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day16WebApiLab", "Day16WebApiLab\Day16WebApiLab.csproj", "{7BEB2FE0-6F18-48AE-A0F8-723E75769574}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day2Core8WebAPI17Lab", "Day2Core8WebAPI17Lab\Day2Core8WebAPI17Lab.csproj", "{665635F9-B3BA-49DA-B11E-85864D2A1E84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day2Core9WebAPI17Lab", "Day2Core9WebAPI17Lab\Day2Core9WebAPI17Lab.csproj", "{26C0D49B-15DE-40D9-9D03-BBF404146B7B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -141,6 +145,14 @@ Global
 		{7BEB2FE0-6F18-48AE-A0F8-723E75769574}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BEB2FE0-6F18-48AE-A0F8-723E75769574}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BEB2FE0-6F18-48AE-A0F8-723E75769574}.Release|Any CPU.Build.0 = Release|Any CPU
+		{665635F9-B3BA-49DA-B11E-85864D2A1E84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{665635F9-B3BA-49DA-B11E-85864D2A1E84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{665635F9-B3BA-49DA-B11E-85864D2A1E84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{665635F9-B3BA-49DA-B11E-85864D2A1E84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26C0D49B-15DE-40D9-9D03-BBF404146B7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26C0D49B-15DE-40D9-9D03-BBF404146B7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26C0D49B-15DE-40D9-9D03-BBF404146B7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26C0D49B-15DE-40D9-9D03-BBF404146B7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
