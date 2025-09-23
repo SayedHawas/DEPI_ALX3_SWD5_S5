@@ -1,0 +1,161 @@
+﻿{
+   "CodeGenerationMode": 5,
+   "ContextClassName": "AppDbContext",
+   "ContextNamespace": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": true,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "Models",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "Day18WizardLab",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 2,
+   "SelectedToBeGenerated": 0,
+   "T4TemplatePath": null,
+   "Tables": [
+      {
+         "Name": "[dbo].[AssetManagement]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Attendance]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[BenefitsCompensation]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Candidate]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[DisciplinaryActions]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[DocumentManagement]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Employee]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Employee_Training]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[HRNeedRequests]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Interview]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Job]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Leave]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[LeaveTypes]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[LkpGeneralDataBranches]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[LkpGeneralDataCompanyProfiles]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[LkpHRDepartments]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Offboarding]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Onboarding]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PerformanceEvaluation]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Project]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Project_Assignment]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Recruiter]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[RecruitmentPortal]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Salary]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SelfServiceRequests]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Survey]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Survey_Response]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Training]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[User]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": null,
+   "UncountableWords": null,
+   "UseAsyncStoredProcedureCalls": true,
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": true,
+   "UseDatabaseNamesForRoutines": true,
+   "UseDateOnlyTimeOnly": false,
+   "UseDbContextSplitting": false,
+   "UseDecimalDataAnnotationForSprocResult": true,
+   "UseFluentApiOnly": false,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": true,
+   "UseInternalAccessModifiersForSprocsAndFunctions": false,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UsePrefixNavigationNaming": false,
+   "UseSchemaFolders": false,
+   "UseSchemaNamespaces": false,
+   "UseSpatial": false,
+   "UseT4": false,
+   "UseT4Split": false
+}
