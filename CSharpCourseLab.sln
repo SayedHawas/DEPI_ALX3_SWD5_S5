@@ -59,6 +59,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day18WizardLab", "Day18Wiza
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day18LabQuery", "Day18LabQuery\Day18LabQuery.csproj", "{15E5A4CA-1F0E-4342-BDD7-5A198166A31F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventDay20Lab", "EventDay20Lab\EventDay20Lab.csproj", "{AFF52C8A-82A5-4B76-A6E2-A671CF3FD97E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventWinDay20Lab", "EventWinDay20Lab\EventWinDay20Lab.csproj", "{2D7B74A9-5783-42D8-AE71-66F9C888B525}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventDemoDay20Lab", "EventDemoDay20Lab\EventDemoDay20Lab.csproj", "{F6027942-F59B-4F42-9020-9184F1CA947E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncDemoDay20Lab", "AsyncDemoDay20Lab\AsyncDemoDay20Lab.csproj", "{8F00C672-A54C-4596-B2E1-5E283AE01567}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPIDay4DemoLab", "WebAPIDay4DemoLab\WebAPIDay4DemoLab.csproj", "{A371D531-BC9D-45BB-AAED-19EFDCD98654}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -177,6 +187,26 @@ Global
 		{15E5A4CA-1F0E-4342-BDD7-5A198166A31F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15E5A4CA-1F0E-4342-BDD7-5A198166A31F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15E5A4CA-1F0E-4342-BDD7-5A198166A31F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFF52C8A-82A5-4B76-A6E2-A671CF3FD97E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFF52C8A-82A5-4B76-A6E2-A671CF3FD97E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFF52C8A-82A5-4B76-A6E2-A671CF3FD97E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFF52C8A-82A5-4B76-A6E2-A671CF3FD97E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D7B74A9-5783-42D8-AE71-66F9C888B525}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D7B74A9-5783-42D8-AE71-66F9C888B525}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D7B74A9-5783-42D8-AE71-66F9C888B525}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D7B74A9-5783-42D8-AE71-66F9C888B525}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6027942-F59B-4F42-9020-9184F1CA947E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6027942-F59B-4F42-9020-9184F1CA947E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6027942-F59B-4F42-9020-9184F1CA947E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6027942-F59B-4F42-9020-9184F1CA947E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F00C672-A54C-4596-B2E1-5E283AE01567}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F00C672-A54C-4596-B2E1-5E283AE01567}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F00C672-A54C-4596-B2E1-5E283AE01567}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F00C672-A54C-4596-B2E1-5E283AE01567}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A371D531-BC9D-45BB-AAED-19EFDCD98654}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A371D531-BC9D-45BB-AAED-19EFDCD98654}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A371D531-BC9D-45BB-AAED-19EFDCD98654}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A371D531-BC9D-45BB-AAED-19EFDCD98654}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
