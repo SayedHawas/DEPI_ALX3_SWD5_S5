@@ -1,0 +1,6 @@
+@Day21WebApiLab_HostAddress = http://localhost:5187
+
+GET {{Day21WebApiLab_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

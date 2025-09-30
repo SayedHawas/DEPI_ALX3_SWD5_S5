@@ -69,6 +69,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncDemoDay20Lab", "AsyncD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPIDay4DemoLab", "WebAPIDay4DemoLab\WebAPIDay4DemoLab.csproj", "{A371D531-BC9D-45BB-AAED-19EFDCD98654}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day21WebApiLab", "Day21WebApiLab\Day21WebApiLab.csproj", "{59FF07B3-1601-4112-9EFA-E47EBBF3BC82}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -207,6 +209,10 @@ Global
 		{A371D531-BC9D-45BB-AAED-19EFDCD98654}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A371D531-BC9D-45BB-AAED-19EFDCD98654}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A371D531-BC9D-45BB-AAED-19EFDCD98654}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59FF07B3-1601-4112-9EFA-E47EBBF3BC82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59FF07B3-1601-4112-9EFA-E47EBBF3BC82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59FF07B3-1601-4112-9EFA-E47EBBF3BC82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59FF07B3-1601-4112-9EFA-E47EBBF3BC82}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
