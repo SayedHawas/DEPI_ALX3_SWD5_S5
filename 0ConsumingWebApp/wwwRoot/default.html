@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <noscript> Please Open Javascript On Your Browser </noscript>
+    <script src="lib/jquery/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: "https://localhost:7153/api/departments",
+                method: "GET",
+                success: function (data) {
+                    console.log(data);
+                }, error: function (error) {
+                    alert(error);
+                }
+            });
+
+        });
+            function formatItem(item) {
+                return item.name + ': $' + item.description;
+            }
+
+            function find() {
+                var id = $('#departmentId').val();
+                $.getJSON('https://localhost:7153/api/departments/' + id)
+                    .done(function (data) {
+                       
+                        $('#department').text(formatItem(data));
+                    })
+                    .fail(function (jqXHR, textStatus, err) {
+                        $('#department').text('Error: ' + err);
+                    });
+            }
+
+    </script>
+</head>
+<body>
+
+
+    <div>
+        <h2>All Department</h2>
+        <ul id="Departments" />
+    </div>
+    <div>
+        <h2>Search by ID</h2>
+        <input type="text" id="departmentId" size="5" />
+        <input type="button" value="Search" onclick="find();" />
+        <p id="department" />
+    </div>
+
+
+</body>
+</html>

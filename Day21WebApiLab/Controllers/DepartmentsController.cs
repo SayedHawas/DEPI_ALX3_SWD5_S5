@@ -20,10 +20,29 @@ namespace Day21WebApiLab.Controllers
 
         //https://localhost:7153/api/Departments?page=1&pagesize=10
         //Pagination
+        [HttpGet("EmployeesName")]
+        public async Task<ActionResult<IEnumerable<GetDepartmentWithEmployeesNameDto>>> GetDepartmentsWithEmployeeNames()
+        {
+            var departments = await _context.Departments.Include("Employees").AsNoTracking().ToListAsync();
+            List<GetDepartmentWithEmployeesNameDto> result = new List<GetDepartmentWithEmployeesNameDto>();
+            foreach (var item in departments)
+            {
+                result.Add(new GetDepartmentWithEmployeesNameDto
+                {
+                    DepartmentId = item.DepartmentId,
+                    Name = item.Name,
+                    Description = item.Description,
+                    EmployeesCounter = item.Employees.Count(),
+                    EmployeeNames = item.Employees.Select(e => e.Name).ToList()
+                });
+            }
+            return Ok(result);
+        }
+
         [HttpGet("Pagination")]
         public async Task<ActionResult<IEnumerable<GetDepartmentDto>>> GetDepartments([FromQuery] int page = 1, [FromQuery] int pageSize = 10)
         {
-            var departments = await _context.Departments.ToListAsync();
+            var departments = await _context.Departments.AsNoTracking().ToListAsync();
             List<GetDepartmentDto> result = new List<GetDepartmentDto>();
             foreach (var item in departments)
             {
@@ -46,7 +65,7 @@ namespace Day21WebApiLab.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<GetDepartmentDto>>> GetDepartments()
         {
-            var departments = await _context.Departments.ToListAsync();
+            var departments = await _context.Departments.AsNoTracking().ToListAsync();
             List<GetDepartmentDto> result = new List<GetDepartmentDto>();
             foreach (var item in departments)
             {
@@ -65,7 +84,7 @@ namespace Day21WebApiLab.Controllers
         public async Task<ActionResult<GetDepartmentDto>> GetDepartment(int id)
         {
             if (id == null || id == 0) return BadRequest();
-            var department = await _context.Departments.FindAsync(id);
+            var department = await _context.Departments.AsNoTracking().FirstOrDefaultAsync(e => e.DepartmentId == id); //FindAsync(id);
             if (department == null)
             {
                 return NotFound();
@@ -127,7 +146,7 @@ namespace Day21WebApiLab.Controllers
         // POST: api/Departments
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<PostDepartmentDto>> PostDepartment(PostDepartmentDto department)
+        public async Task<ActionResult<PostDepartmentDto>> PostDepartment([FromForm] PostDepartmentDto department)
         {
             if (!ModelState.IsValid) return BadRequest(department);
 
