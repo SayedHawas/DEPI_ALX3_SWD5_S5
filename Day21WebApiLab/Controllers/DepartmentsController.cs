@@ -16,6 +16,7 @@ namespace Day21WebApiLab.Controllers
         public DepartmentsController(AppDbContext context)
         {
             _context = context;
+
         }
 
         //https://localhost:7153/api/Departments?page=1&pagesize=10
