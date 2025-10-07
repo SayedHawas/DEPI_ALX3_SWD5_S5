@@ -1,8 +1,11 @@
 
 using Day21WebApiLab.Data;
+using Day21WebApiLab.Services.Implements;
+using Day21WebApiLab.Services.Interfaces;
+using Day21WebApiLab.UnitOfWorks.Implement;
+using Day21WebApiLab.UnitOfWorks.Interface;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
-
 namespace Day21WebApiLab
 {
     public class Program
@@ -40,6 +43,10 @@ namespace Day21WebApiLab
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            //Resolving Services Repositories 
+            builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+            builder.Services.AddScoped<IDepartmentService, DepartmentService>();
+            //builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
